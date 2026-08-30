@@ -80,6 +80,15 @@ body.dark-theme {
   background-attachment: fixed;
 }
 
+body:not(.dark-theme) {
+  background:
+    radial-gradient(circle at 8% 0%, rgba(99,133,255,0.30) 0%, rgba(99,133,255,0.16) 22%, rgba(99,133,255,0.06) 40%, transparent 58%),
+    radial-gradient(circle at 100% 15%, rgba(167,139,250,0.26) 0%, rgba(167,139,250,0.14) 24%, rgba(167,139,250,0.05) 42%, transparent 60%),
+    radial-gradient(ellipse at 15% 100%, rgba(255,183,140,0.22) 0%, rgba(255,183,140,0.11) 26%, rgba(255,183,140,0.04) 46%, transparent 65%),
+    var(--body-color);
+  background-attachment: fixed;
+}
+
 .nav__btns {
   display: flex;
   align-items: center;
