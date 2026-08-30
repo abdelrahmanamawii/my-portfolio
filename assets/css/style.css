@@ -1,17 +1,12 @@
-/*==================== GOOGLE FONTS ====================*/
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-/*==================== VARIABLES CSS ====================*/
 :root {
   --header-height: 3rem;
 
-  /*========== Colors ==========*/
-  /* Change favorite color */
-  --hue-color: 225;
-  /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+--hue-color: 225;
 
-  /* HSL color mode */
-  --first-color: hsl(var(--hue-color), 69%, 61%);
+--first-color: hsl(var(--hue-color), 69%, 61%);
   --first-color-second: hsl(var(--hue-color), 69%, 61%);
   --first-color-alt: hsl(var(--hue-color), 57%, 53%);
   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
@@ -24,11 +19,9 @@
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
-  /*========== Font and typography ==========*/
-  --body-font: 'Poppins', sans-serif;
+--body-font: 'Poppins', sans-serif;
 
-  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
-  --big-font-size: 2rem;
+--big-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
@@ -36,13 +29,10 @@
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
 
-  /*========== Font weight ==========*/
-  --font-medium: 500;
+--font-medium: 500;
   --font-semi-bold: 600;
 
-  /*========== Margenes Bottom ==========*/
-  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
-  --mb-0-25: .25rem;
+--mb-0-25: .25rem;
   --mb-0-5: .5rem;
   --mb-0-75: .75rem;
   --mb-1: 1rem;
@@ -51,13 +41,11 @@
   --mb-2-5: 2.5rem;
   --mb-3: 3rem;
 
-  /*========== z index ==========*/
-  --z-tooltip: 10;
+--z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
 }
 
-/* Font size for large devices */
 @media screen and (min-width: 968px) {
   :root {
     --big-font-size: 3rem;
@@ -70,9 +58,8 @@
   }
 }
 
-/*========== Variables Dark theme ==========*/
 body.dark-theme {
-  /* HSL color mode */
+  
   --first-color-second: hsl(var(--hue-color), 30%, 8%);
   --title-color: hsl(var(--hue-color), 8%, 95%);
   --text-color: hsl(var(--hue-color), 8%, 75%);
@@ -84,7 +71,15 @@ body.dark-theme {
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 }
 
-/*========== Button Dark/Light ==========*/
+body.dark-theme {
+  background:
+    radial-gradient(circle at 5% 0%, rgba(130,143,255,0.30) 0%, rgba(110,120,230,0.15) 22%, rgba(94,106,210,0.05) 40%, transparent 58%),
+    radial-gradient(circle at 100% 20%, rgba(94,106,210,0.24) 0%, rgba(94,106,210,0.12) 24%, rgba(94,106,210,0.04) 42%, transparent 60%),
+    radial-gradient(ellipse at 15% 100%, rgba(190,198,220,0.16) 0%, rgba(170,180,210,0.08) 26%, rgba(170,180,210,0.03) 46%, transparent 65%),
+    var(--body-color);
+  background-attachment: fixed;
+}
+
 .nav__btns {
   display: flex;
   align-items: center;
@@ -101,10 +96,6 @@ body.dark-theme {
   color: var(--first-color);
 }
 
-
-
-
-/*==================== BASE ====================*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -144,7 +135,6 @@ img {
   height: auto;
 }
 
-/*==================== REUSABLE CSS CLASSES ====================*/
 .section {
   padding: 2rem 0 4rem;
 }
@@ -165,7 +155,6 @@ img {
   text-align: center;
 }
 
-/*==================== LAYOUT ====================*/
 .container {
   max-width: 768px;
   margin-left: var(--mb-1-5);
@@ -186,7 +175,6 @@ img {
   background-color: var(--body-color);
 }
 
-/*==================== NAV ====================*/
 .nav {
   max-width: 968px;
   height: var(--header-height);
@@ -263,22 +251,18 @@ img {
   color: var(--first-color-alt);
 }
 
-/* show menu */
 .show-menu {
   bottom: 0;
 }
 
-/* Active link */
 .active-link {
   color: var(--first-color);
 }
 
-/* Change background header */
 .scroll-header {
   box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
 }
 
-/*==================== HOME ====================*/
 .home__container {
   gap: 1rem;
 }
@@ -371,7 +355,6 @@ img {
   font-size: 1.25rem;
 }
 
-/*==================== BUTTONS ====================*/
 .button {
   display: inline-block;
   background-color: var(--first-color);
@@ -420,13 +403,13 @@ img {
   color: var(--first-color);
 }
 
-/*==================== ABOUT ====================*/
-.about__img {
-  width: 480px;
-  max-width: none;
-  justify-self: center;
-  align-self: center;
-  transform: translateY(-20px);
+.about__container {
+  grid-template-columns: 1fr !important;
+}
+
+.about__data {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .about__description {
@@ -460,7 +443,6 @@ img {
   justify-content: center;
 }
 
-/*==================== EXPERIENCE ====================*/
 .experience__container {
   grid-template-columns: 1fr;
   gap: 1.5rem;
@@ -537,7 +519,17 @@ img {
   margin-right: 4.0rem;
 }
 
-/*==================== SKILLS ====================*/
+.clarity-logo {
+  height: 36px;
+  width: auto;
+  margin-right: .75rem;
+}
+
+body:not(.dark-theme) .amazon-logo,
+body:not(.dark-theme) .clarity-logo {
+  filter: invert(1);
+}
+
 .skills__container {
   grid-template-columns: 1fr;
   gap: 1.5rem;
@@ -604,9 +596,6 @@ img {
   font-weight: var(--font-medium);
 }
 
-
-
-/*==================== PORTFOLIO ====================*/
 .portfolio__container {
   overflow: initial;
 }
@@ -665,8 +654,6 @@ img {
   filter: blur(1px);
 }
 
-
-/*==================== PROJECT IN MIND ====================*/
 .project {
   text-align: center;
 }
@@ -695,9 +682,6 @@ img {
   justify-self: center;
 }
 
-
-
-/*==================== TESTIMONIAL ====================*/
 .testimonial__data,
 .testimonial__header {
   display: flex;
@@ -753,7 +737,6 @@ img {
   color: var(--first-color-alt);
 }
 
-/*==================== CONTACT ME ====================*/
 .contact__container {
   row-gap: 3rem;
 }
@@ -801,7 +784,6 @@ img {
   padding: .25rem .5rem .5rem 0;
 }
 
-/*==================== FOOTER ====================*/
 .footer {
   padding-top: 2rem;
 }
@@ -823,9 +805,6 @@ img {
 .footer__subtitle {
   font-size: var(--small-font-size);
 }
-
-
-
 
 .footer__social {
   font-size: 1.25rem;
@@ -849,8 +828,6 @@ footer .footer__social a:hover {
   color: #fff;
 }
 
-
-/*========== SCROLL UP ==========*/
 .scrollup {
   position: fixed;
   right: 1rem;
@@ -872,14 +849,10 @@ footer .footer__social a:hover {
   color: #fff;
 }
 
-
-
-/* Show scroll */
 .show-scroll {
   bottom: 5rem;
 }
 
-/*========== SCROLL BAR ==========*/
 ::-webkit-scrollbar {
   width: 0.6rem;
   background-color: var(--scroll-bar-color);
@@ -895,8 +868,6 @@ footer .footer__social a:hover {
   background-color: var(--text-color-light);
 }
 
-/*==================== MEDIA QUERIES ====================*/
-/* For small devices */
 @media screen and (max-width: 350px) {
   .container {
     margin-left: var(--mb-1);
@@ -961,7 +932,6 @@ footer .footer__social a:hover {
   }
 }
 
-/* For medium devices */
 @media screen and (min-width: 568px) {
   .home__content {
     grid-template-columns: max-content 1fr 1fr;
@@ -1067,14 +1037,6 @@ footer .footer__social a:hover {
     column-gap: 5rem;
   }
 
-  .about__img {
-    width: 350px;
-  }
-
-  .about__description {
-    text-align: initial;
-  }
-
   .about__info {
     justify-content: space-between;
   }
@@ -1104,8 +1066,7 @@ footer .footer__social a:hover {
     visibility: hidden;
   }
 
-  
-  .portfolio__content {
+.portfolio__content {
     align-items: center;
   }
 
@@ -1137,8 +1098,7 @@ footer .footer__social a:hover {
     padding: 3rem 0 3.5rem;
   }
 
-
-  .footer__socials {
+.footer__socials {
   justify-self: end;
   display: flex;
   justify-content: flex-end;
@@ -1154,9 +1114,6 @@ footer .footer__social a:hover {
   }
 }
 
-
-
-/* For large devices */
 @media screen and (min-width: 1024px) {
 
   .header,
@@ -1181,9 +1138,7 @@ footer .footer__social a:hover {
     visibility: visible;
   }
 
- 
-
-  .swiper-portfolio-icon {
+.swiper-portfolio-icon {
     font-size: 3.5rem;
   }
 
@@ -1213,14 +1168,11 @@ footer .footer__social a:hover {
 }
 }
 
-
-/*==================== Skills logo ====================*/
 .skills__logo:hover{
   transform: translateY(-.25rem);
   transition: 1s;
 }
 
-/*==================== PORTFOLIO IMAGE CARD OVERRIDE ====================*/
 .portfolio__content {
   display: flex;
   flex-direction: column;
@@ -1318,21 +1270,17 @@ footer .footer__social a:hover {
   padding: 0 !important;
   background: transparent !important;
 }
-/*==================== FINAL CLEANUP / SECTION OVERRIDES ====================*/
-/* Fix social image typo from earlier CSS */
+
 .home__social-img {
   width: 1.5rem;
   height: 1.5rem;
 }
 
-/* Keep CV button centered */
 .about__buttons {
   display: flex;
   justify-content: center;
 }
 
-/*==================== CERTIFICATES ====================*/
-/* Certificates are now separated from Portfolio classes */
 .certificate__container {
   overflow: initial;
 }
@@ -1368,7 +1316,6 @@ footer .footer__social a:hover {
   bottom: -2.5rem;
 }
 
-/*==================== PORTFOLIO CLEAN OVERRIDE ====================*/
 .portfolio__container {
   overflow: initial;
 }
@@ -1439,12 +1386,10 @@ footer .footer__social a:hover {
   transform: scale(1.04);
 }
 
-/* Named pagination classes used by the fixed HTML */
 .portfolio__container .swiper-pagination-portfolio {
   bottom: -2.5rem;
 }
 
-/*==================== RESPONSIVE OVERRIDES ====================*/
 @media screen and (min-width: 768px) {
   .about__buttons {
     justify-content: center;
