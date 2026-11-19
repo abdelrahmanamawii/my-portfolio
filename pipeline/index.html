@@ -308,14 +308,17 @@ h2.big{font-size:clamp(36px,4.6vw,64px);line-height:.98;font-weight:820;letter-s
 .foot .btn svg{width:14px;height:14px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 /* ---------- smooth page-to-page transition (portfolio <-> pipeline) ----------
-   The page only starts hidden if the script below can reveal it, so it can never get stuck invisible. */
-body{transition:opacity .6s cubic-bezier(.2,.7,.2,1)}
-main{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
-html.pg-pre body{opacity:0}
+   A veil in the page colour fades over the page instead of fading the page itself:
+   fading the page (opacity) switches off every frosted-glass blur until the fade ends, so the glass would snap in.
+   The veil only starts opaque when the script below can lift it, and is removed entirely once done. */
+html::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;background:var(--ground);opacity:0;transition:opacity .65s cubic-bezier(.2,.7,.2,1)}
+html.pg-pre::after{opacity:1;transition:none}
+html.pg-leaving::after{opacity:1;transition:opacity .28s ease}
+html.pg-done::after{display:none}
+main{transition:transform .75s cubic-bezier(.2,.7,.2,1)}
 html.pg-pre main{transform:translateY(14px)}
-html.pg-leaving body{opacity:0;transition-duration:.28s;transition-timing-function:ease}
 html.pg-leaving main{transform:translateY(-8px);transition-duration:.28s;transition-timing-function:ease}
-@media (prefers-reduced-motion:reduce){body,main{transition:none}}
+@media (prefers-reduced-motion:reduce){html::after{display:none}main{transition:none}}
 </style>
 <script>try{if(!(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches))document.documentElement.classList.add("pg-pre")}catch(e){}</script>
 <script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("selected-theme")==="dark"?"dark":"light")}catch(e){document.documentElement.setAttribute("data-theme","light")}</script>
@@ -920,11 +923,12 @@ var rt; window.addEventListener("resize", function(){ clearTimeout(rt); rt = set
     var u; try { u = new URL(a.href, location.href); } catch(err){ return; }
     if (u.origin !== location.origin || u.pathname === location.pathname || /\.(pdf|png|jpe?g|docx?|xlsx?)$/i.test(u.pathname)) return;
     e.preventDefault();
-    document.documentElement.classList.add("pg-leaving");
+    clearTimeout(doneT); root.classList.remove("pg-done"); void root.offsetWidth; root.classList.add("pg-leaving");
     setTimeout(function(){ location.href = u.href; }, 280);
   });
   /* reveal: fade in on arrival (and undo the fade-out when Back restores the page from cache) */
-  function show(){ document.documentElement.classList.remove("pg-pre", "pg-leaving"); }
+  var root = document.documentElement, doneT;
+  function show(){ root.classList.remove("pg-pre", "pg-leaving"); clearTimeout(doneT); doneT = setTimeout(function(){ root.classList.add("pg-done"); }, 900); }
   requestAnimationFrame(function(){ requestAnimationFrame(show); });
   setTimeout(show, 400);
   window.addEventListener("pageshow", show);
