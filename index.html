@@ -1,988 +1,582 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Abdelrahman Amawi: Data Analyst specializing in BI, predictive analytics, and automation. Dashboards, data pipelines, and case studies built with SQL, Power BI, and Python.">
-    <meta name="keywords" content="Abdelrahman Amawi, Data Analyst, Power BI, SQL, Predictive Analytics, Data Automation, Business Intelligence">
-
-<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-
-<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
-
-<link rel="stylesheet" href="assets/css/style.css" />
-
-    <title>Abdelrahman Amawi</title>
-
-<link rel="shortcut icon" href="assets/img/portfolio2026.png" type="image/png">
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abdelrahman Amawi</title>
+<meta name="description" content="Abdelrahman Amawi: Business Data Analyst building production data pipelines, predictive and NLP models, and Power BI reporting for business teams.">
+<meta name="keywords" content="Abdelrahman Amawi, Business Data Analyst, Data Analyst, Power BI, SQL, PostgreSQL, Python, Predictive Analytics, Data Pipelines, Business Intelligence">
+<link rel="icon" href="assets/img/portfolio2026.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400..900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("selected-theme")==="dark"?"dark":"light")}catch(e){document.documentElement.setAttribute("data-theme","light")}</script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ52PYWQXY"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-XZ52PYWQXY');
 </script>
+<script>
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "wzufges02w");
+</script>
 
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wzufges02w");
-</script>    
-    
+<style>
+:root{
+  color-scheme: light;
+  --ground:hsl(225,60%,99%); --paper:#FFFFFF; --tone:#ECEFF6; --tone-2:#D9DEE9;
+  --ink:#10141B; --ink-2:#434B59; --ink-3:#5F6878;
+  --field:#121A2B; --field-2:#1D2840; --on-field:#EEF1F6; --on-field-2:#A9B3C6;
+  --sig:#F0643A; --sig-text:#B23D17; --sig-soft:#FBE1D7;
+  --glass:rgba(255,255,255,.55); --glass-edge:rgba(255,255,255,.7);
+  --well:rgba(67,75,89,.06); --well-edge:rgba(16,20,27,.06);
+  --display:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
+  --read:"Source Serif 4",Georgia,serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --gut:clamp(16px,4.5vw,64px);
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --ground:hsl(225,28%,12%); --paper:hsl(225,29%,16%); --tone:hsl(225,25%,21%); --tone-2:hsl(225,22%,27%);
+  --ink:#E9EDF3; --ink-2:#A9B3C4; --ink-3:#8590A3;
+  --field:#070B13; --field-2:#141C2C; --on-field:#EEF1F6; --on-field-2:#9BA6BA;
+  --sig:#F57A54; --sig-text:#FF9B7A; --sig-soft:#3A1E15;
+  --glass:rgba(255,255,255,.05); --glass-edge:rgba(255,255,255,.09);
+  --well:rgba(255,255,255,.04); --well-edge:rgba(255,255,255,.07);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scrollbar-color:var(--ink-3) var(--ground);-webkit-text-size-adjust:100%}
+::selection{background:var(--sig);color:#10141B}
+body{margin:0;color:var(--ink);font:400 16px/1.55 var(--display);-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  background:
+  radial-gradient(circle at 8% 0%, rgba(99,133,255,0.30) 0%, rgba(99,133,255,0.16) 22%, rgba(99,133,255,0.06) 40%, transparent 58%),
+  radial-gradient(circle at 100% 15%, rgba(167,139,250,0.26) 0%, rgba(167,139,250,0.14) 24%, rgba(167,139,250,0.05) 42%, transparent 60%),
+  radial-gradient(ellipse at 15% 100%, rgba(255,183,140,0.22) 0%, rgba(255,183,140,0.11) 26%, rgba(255,183,140,0.04) 46%, transparent 65%),
+  var(--ground);background-attachment:fixed}
+:root[data-theme="dark"] body{background:
+  radial-gradient(circle at 5% 0%, rgba(130,143,255,0.30) 0%, rgba(110,120,230,0.15) 22%, rgba(94,106,210,0.05) 40%, transparent 58%),
+  radial-gradient(circle at 100% 20%, rgba(94,106,210,0.24) 0%, rgba(94,106,210,0.12) 24%, rgba(94,106,210,0.04) 42%, transparent 60%),
+  radial-gradient(ellipse at 15% 100%, rgba(190,198,220,0.16) 0%, rgba(170,180,210,0.08) 26%, rgba(170,180,210,0.03) 46%, transparent 65%),
+  var(--ground);background-attachment:fixed}
+a{color:inherit;text-underline-offset:4px;text-decoration-thickness:1px}
+:focus-visible{outline:3px solid var(--sig);outline-offset:3px;border-radius:6px}
+button,input,textarea{font:inherit;color:inherit}
+h1,h2,h3,h4{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+img{max-width:100%;display:block}
+.g{padding-inline:var(--gut)}
+main,.foot{overflow-x:clip}
+.inner{max-width:1180px;margin:0 auto}
+.num{font-variant-numeric:tabular-nums}
+section[id]{scroll-margin-top:72px}
+.sec{padding-block:clamp(72px,9vw,120px) 0}
+h2.big{font-size:clamp(36px,4.6vw,60px);line-height:1;font-weight:820;letter-spacing:-.035em}
+.take{font:400 clamp(18px,1.45vw,20px)/1.55 var(--read);color:var(--ink-2);max-width:58ch;margin-top:12px}
+.take a{color:var(--sig-text);font-weight:600}
+.glass{background:var(--glass);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);box-shadow:inset 0 0 0 1px var(--glass-edge),0 18px 40px -30px rgba(16,20,27,.45);border-radius:20px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:12px;padding:12px 18px;font-weight:700;font-size:15.5px;text-decoration:none;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.solid{background:var(--ink);color:var(--ground)}
+.btn.soft{background:var(--tone);color:var(--ink)}
+.btn i{font-size:18px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:13.5px;font-weight:650;border-radius:999px;padding:4px 11px;background:var(--tone);color:var(--ink-2)}
+
+/* header */
+.head{position:sticky;top:0;z-index:30;transition:background-color .2s,box-shadow .2s}
+.head.scrolled{background:var(--ground);box-shadow:0 10px 24px -20px rgba(16,20,27,.6)}
+.top{display:flex;align-items:center;gap:12px 22px;padding-block:12px}
+.me{font-weight:800;font-size:18px;text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
+.top nav{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.top nav::-webkit-scrollbar{display:none}
+.top nav a{white-space:nowrap;text-decoration:none;color:var(--ink-2);font-size:15px;font-weight:600;padding:7px 12px;border-radius:999px}
+.top nav a:hover{background:var(--tone);color:var(--ink)}
+.top nav a[aria-current="true"]{background:var(--ink);color:var(--ground)}
+.theme{border:0;background:var(--tone);border-radius:999px;width:38px;height:38px;display:grid;place-items:center;flex:none;cursor:pointer;font-size:18px}
+@media (max-width:760px){.me{font-size:16px}.top nav a{padding:7px 9px;font-size:14px}}
+
+/* hero */
+.hero{padding-block:clamp(40px,6vw,88px) clamp(24px,3vw,40px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:40px 64px;align-items:center}
+.hero .hello{font-size:17px;font-weight:650;color:var(--sig-text)}
+.hero h1{font-size:clamp(38px,4.8vw,66px);line-height:1;font-weight:850;letter-spacing:-.04em;margin-top:10px;max-width:19ch}
+.hero .lead{font:400 clamp(18px,1.5vw,21px)/1.55 var(--read);color:var(--ink-2);max-width:52ch;margin-top:22px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.socials{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.socials a{display:inline-flex;align-items:center;gap:7px;font-size:14.5px;font-weight:650;color:var(--ink-2);text-decoration:none;padding:6px 12px 6px 9px;border-radius:999px;background:var(--glass);box-shadow:inset 0 0 0 1px var(--glass-edge)}
+.socials a:hover{color:var(--ink)}
+.socials i{font-size:18px}
+.socials img{width:16px;height:16px}
+.portrait{margin:0;justify-self:center;width:min(100%,300px);display:flex;flex-direction:column;gap:12px}
+/* Quiet frame matching the work and certificate wells; the current cut-out photo is cropped to head and shoulders so its rough lower edge stays outside the frame. A new full photo only needs the .crop rules removed. */
+.portrait .frame{position:relative;aspect-ratio:4/5;border-radius:20px;overflow:hidden;
+  background:radial-gradient(circle at 70% 15%,rgba(240,100,58,.10),transparent 60%),var(--well);box-shadow:inset 0 0 0 1px var(--well-edge),0 24px 50px -32px rgba(16,20,27,.5)}
+.portrait .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.portrait .frame.crop img{inset:auto;width:172%;height:auto;max-width:none;left:-36%;top:-44%;object-fit:fill}
+.portrait figcaption{font-size:14px;line-height:1.4;color:var(--ink-2);padding-left:2px}
+.portrait figcaption b{display:block;font-size:15px;color:var(--ink)}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.portrait{justify-self:start;width:min(100%,280px)}}
+.figures{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:clamp(40px,5vw,64px)}
+.figure{padding:18px 20px}
+.figure b{display:block;font:850 clamp(30px,3vw,40px)/1 var(--display);letter-spacing:-.03em}
+.figure span{display:block;font-size:14.5px;color:var(--ink-2);margin-top:6px;line-height:1.35}
+@media (max-width:760px){.figures{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* featured */
+.feature{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;overflow:hidden;margin-top:28px;border-radius:24px;cursor:pointer;transition:box-shadow .3s}
+.feature .shot{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:clamp(20px,3.5vw,44px);text-decoration:none;color:var(--ink);
+  background:radial-gradient(circle at 85% 10%,rgba(240,100,58,.16),transparent 55%),radial-gradient(circle at 10% 95%,rgba(99,133,255,.16),transparent 55%),var(--tone);border-radius:24px 0 0 24px}
+:root[data-theme="dark"] .feature .shot{background:radial-gradient(circle at 85% 10%,rgba(245,122,84,.16),transparent 55%),radial-gradient(circle at 10% 95%,rgba(130,143,255,.14),transparent 55%),var(--paper)}
+.journey{width:100%;max-width:440px;background:var(--paper);border-radius:18px;padding:18px 18px 14px;box-shadow:0 1px 0 var(--glass-edge) inset,0 24px 50px -28px rgba(16,20,27,.45);transition:transform .3s}
+:root[data-theme="dark"] .journey{background:var(--ground)}
+.feature .shot:hover .journey{transform:translateY(-4px)}
+.journey .jh{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:13.5px;color:var(--ink-3)}
+.journey .jh b{color:var(--ink);font-size:15px}
+.journey svg{display:block;width:100%;height:auto;margin:14px 0 8px;overflow:visible}
+.jbase{fill:none;stroke:var(--tone-2);stroke-width:3;stroke-linecap:round}
+.jline{fill:none;stroke:var(--sig);stroke-width:3;stroke-linecap:round;stroke-dasharray:1 1;stroke-dashoffset:0}
+.journey .dot{fill:var(--paper);stroke:var(--sig);stroke-width:3}
+:root[data-theme="dark"] .journey .dot{fill:var(--ground)}
+.journey .ring{fill:var(--sig-soft);stroke:var(--sig);stroke-width:2}
+.journey .core{fill:var(--sig)}
+.journey .nm{font:650 12.5px var(--display);fill:var(--ink);text-anchor:middle;letter-spacing:-.005em}
+.journey .ct{font:500 10.5px var(--mono);fill:var(--ink-3);text-anchor:middle}
+.journey .start .nm,.journey .end .nm{font-weight:800}
+.journey .jf{display:flex;justify-content:space-between;gap:8px;border-top:1px solid var(--tone);padding-top:10px;font:500 12px var(--mono);color:var(--ink-3)}
+.journey .jf b{color:var(--ink);font-weight:700}
+@keyframes jdraw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes jpop{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.feature.aos-animate .jline{animation:jdraw 2.4s cubic-bezier(.45,.05,.25,1) .2s both}
+.feature.aos-animate .journey .n{animation:jpop .45s ease-out var(--d) both}
+@media (prefers-reduced-motion:reduce){.feature.aos-animate .jline,.feature.aos-animate .journey .n{animation:none}}
+.feature .body{padding:clamp(22px,3vw,40px);display:flex;flex-direction:column;gap:14px}
+.feature .kicker{font-size:14px;font-weight:700;color:var(--sig-text)}
+.feature h3{font-size:clamp(26px,2.8vw,36px);font-weight:840;letter-spacing:-.03em;line-height:1.05}
+.feature p{font:400 17px/1.55 var(--read);color:var(--ink-2)}
+.feature .body ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.feature .body li{font-size:15.5px;color:var(--ink-2);display:flex;gap:10px;align-items:baseline}
+.feature .body li b{font-weight:800;color:var(--ink);min-width:5.4ch}
+.feature .btn.solid{background:var(--sig);color:#10141B}
+/* The whole card is one big link: the button stretches an invisible layer over the card */
+.feature .btn.solid::after{content:"";position:absolute;inset:0;border-radius:24px}
+.feature .btn.solid:hover{transform:none}
+.feature .btn.solid i{transition:transform .25s}
+.feature:hover{box-shadow:inset 0 0 0 1px var(--glass-edge),0 30px 60px -36px rgba(16,20,27,.55)}
+.feature:hover .journey{transform:translateY(-4px)}
+.feature:hover .btn.solid i,.feature:hover .cue i{transform:translateX(4px)}
+.feature:has(.btn.solid:focus-visible){outline:3px solid var(--sig);outline-offset:3px}
+/* Interactivity cue under the journey card */
+.cue{display:inline-flex;align-items:center;gap:10px;padding:9px 16px 9px 12px;border-radius:999px;background:var(--ink);color:var(--ground);font-size:14px;font-weight:700;box-shadow:0 14px 30px -18px rgba(16,20,27,.6)}
+.cue i{font-size:16px;transition:transform .25s}
+.cue .pulse{position:relative;width:9px;height:9px;border-radius:50%;background:var(--sig);flex:none}
+.cue .pulse::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--sig);animation:cuepulse 1.8s ease-out infinite}
+@keyframes cuepulse{from{transform:scale(1);opacity:.6}to{transform:scale(2.8);opacity:0}}
+/* The pill arrives once the journey line has finished drawing (line: .2s + 2.4s) */
+@keyframes cuepop{0%{opacity:0;transform:translateY(10px) scale(.92)}60%{opacity:1;transform:translateY(-2px) scale(1.02)}100%{opacity:1;transform:none}}
+.feature.aos-animate .cue{animation:cuepop .7s cubic-bezier(.34,1.4,.64,1) 2.7s both}
+.feature.aos-animate .cue .pulse::after{animation-delay:3.4s}
+@media (prefers-reduced-motion:reduce){.cue .pulse::after,.feature.aos-animate .cue{animation:none}}
+@media (max-width:900px){.feature{grid-template-columns:1fr}.feature .shot{border-radius:24px 24px 0 0}}
+
+/* case grid */
+.cases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}
+.case{overflow:hidden;display:flex;flex-direction:column}
+/* Image wells: a faint tinted frame; the image keeps its own shape (never cropped) and is centred inside */
+.well{position:relative;background:var(--well);box-shadow:inset 0 0 0 1px var(--well-edge);overflow:hidden}
+.well img{position:absolute;inset:var(--pad,14px);margin:auto;width:auto;height:auto;max-width:calc(100% - 2*var(--pad,14px));max-height:calc(100% - 2*var(--pad,14px))}
+.case .shot{aspect-ratio:16/10;margin:10px 10px 0;border-radius:14px;--pad:14px}
+.case .shot img{border-radius:8px;box-shadow:0 10px 24px -14px rgba(16,20,27,.45);transition:transform .5s}
+.case:hover .shot img{transform:scale(1.02)}
+.case .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.case .meta{font-size:13.5px;font-weight:700;color:var(--sig-text)}
+.case h3{font-size:22px;font-weight:800;letter-spacing:-.02em}
+.case p{font:400 16px/1.5 var(--read);color:var(--ink-2)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
+.links a{display:inline-flex;align-items:center;gap:6px;font-size:14.5px;font-weight:700;text-decoration:none;padding:8px 12px;border-radius:10px;background:var(--tone);color:var(--ink)}
+.links a:hover{background:var(--ink);color:var(--ground)}
+.links a i{font-size:16px}
+.case.wide{grid-column:1/-1;flex-direction:row}
+.case.wide .shot{flex:0 0 52%;aspect-ratio:auto;min-height:300px;margin:10px 0 10px 10px}
+@media (max-width:760px){.cases{grid-template-columns:1fr}.case.wide{flex-direction:column}.case.wide .shot{aspect-ratio:16/10;min-height:0;margin:10px 10px 0}}
+
+/* experience */
+.roles{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:14px}
+.role{display:grid;grid-template-columns:200px minmax(0,1fr);gap:16px 32px;padding:22px 24px}
+.role .org{display:flex;flex-direction:column;gap:8px}
+.role .logo{min-height:44px;display:flex;align-items:center}
+/* every logo gets the Aramex wordmark width (140px); Amazon and Clarity files carry empty margins, so they are scaled and trimmed to match */
+.role .logo img{width:140px;height:auto;max-width:none}
+.role .logo.amazon img{width:138px;margin:-12px 0 -10px -2px}
+.role .logo.clarity img{width:150px;margin:0 0 0 -4px}
+.role .where{font-size:14px;color:var(--ink-2);line-height:1.4}
+.role h3{font-size:22px;font-weight:800}
+.role p{font:400 16.5px/1.6 var(--read);color:var(--ink-2);margin:8px 0 12px}
+/* These two logos are white artwork made for the old dark site: darken them in light mode */
+:root[data-theme="light"] .role .logo img.inv{filter:invert(1) hue-rotate(180deg)}
+@media (max-width:760px){.role{grid-template-columns:1fr}}
+
+/* stack */
+.stack{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:28px}
+.stack .col{padding:20px}
+.stack h3{font-size:16px;font-weight:800;color:var(--sig-text);margin-bottom:12px}
+.stack ul{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+.stack li{display:flex;align-items:center;gap:10px;font-size:15.5px;font-weight:600}
+.stack li img{width:24px;height:24px;object-fit:contain;flex:none}
+.stack .tags span{font-size:13.5px}
+@media (max-width:980px){.stack{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.stack{grid-template-columns:1fr}}
+
+/* certificates */
+.certs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:28px}
+.cert{padding:16px;display:flex;flex-direction:column;gap:12px}
+.cert .img{aspect-ratio:4/3;border-radius:12px;--pad:16px}
+.cert .img img{border-radius:6px}
+.cert h3{font-size:16px;font-weight:750;line-height:1.3;flex:1}
+.cert a{font-size:14.5px;font-weight:700;color:var(--sig-text);text-decoration:none;display:inline-flex;gap:6px;align-items:center}
+@media (max-width:980px){.certs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* recommendations */
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:28px}
+.quote{margin:0;padding:22px 24px;display:flex;flex-direction:column;gap:14px}
+.quote blockquote{margin:0;font:400 18px/1.55 var(--read);color:var(--ink)}
+.quote details summary{cursor:pointer;font-size:14.5px;font-weight:700;color:var(--sig-text);list-style:none}
+.quote details summary::-webkit-details-marker{display:none}
+.quote details p{font:400 16px/1.6 var(--read);color:var(--ink-2);margin-top:10px}
+.who{display:flex;align-items:center;gap:12px;margin-top:auto}
+.who img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+.who b{display:flex;align-items:center;gap:6px;font-size:16px}
+.who b a{color:var(--ink-3);text-decoration:none;font-size:18px}
+.who span{font-size:14px;color:var(--ink-2)}
+@media (max-width:860px){.quotes{grid-template-columns:1fr}}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:28px 48px;margin-top:28px;align-items:start}
+.reach{display:grid;gap:10px}
+.reach a{display:flex;align-items:center;gap:12px;padding:14px 16px;text-decoration:none}
+.reach i{font-size:22px;color:var(--sig-text)}
+.reach b{display:block;font-size:15.5px}
+.reach span{font-size:14.5px;color:var(--ink-2);word-break:break-all}
+form{padding:22px;display:grid;gap:14px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:grid;gap:6px;font-size:14.5px;font-weight:650}
+input,textarea{border:0;border-radius:12px;padding:12px 14px;background:var(--paper);box-shadow:inset 0 0 0 1px var(--tone-2);font-size:16px;font-family:var(--display)}
+input:focus,textarea:focus{outline:none;box-shadow:inset 0 0 0 2px var(--sig)}
+textarea{resize:vertical;min-height:150px}
+@media (max-width:860px){.contact{grid-template-columns:1fr}.row2{grid-template-columns:1fr}}
+
+/* footer */
+.foot{margin-top:clamp(72px,9vw,120px);background:var(--field);color:var(--on-field);padding-block:44px 32px}
+.foot-grid{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.foot .name{font-size:clamp(26px,3vw,36px);font-weight:840;letter-spacing:-.03em}
+.foot .role-line{color:var(--on-field-2);margin-top:4px}
+.foot .icons{display:flex;gap:8px}
+.foot .icons a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--field-2);color:var(--on-field);font-size:20px;text-decoration:none}
+.foot .copy{margin-top:28px;font-size:14px;color:var(--on-field-2)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
+<body>
+<header class="head" id="head"><div class="g"><div class="inner top">
+  <a class="me" href="#home">Abdelrahman Amawi</a>
+  <nav id="nav" aria-label="Sections">
+    <a href="#experience">Experience</a><a href="#work">Work</a><a href="#stack">Stack</a><a href="#certificates">Certificates</a><a href="#recommendations">Recommendations</a><a href="#contact">Contact</a>
+  </nav>
+  <button class="theme" id="theme" type="button" aria-label="Switch colour theme"><i class="uil uil-moon"></i></button>
+</div></div></header>
 
-<body class="dark-theme">
-
-<header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">Abdelrahman</a>
-
-            <div data-aos="fade-in" class="nav__menu" id="nav-menu">
-                <ul class="nav__list grid">
-                    <li class="nav__items">
-                        <a href="#home" class="nav__link active-link">
-                            <i class="uil uil-estate nav__icon"></i> Home
-                        </a>
-                    </li>
-
-                    <li class="nav__items">
-                        <a href="#experience" class="nav__link">
-                            <i class="uil uil-briefcase-alt nav__icon"></i> Experience
-                        </a>
-                    </li>
-
-                    <li class="nav__items">
-                        <a href="#skills" class="nav__link ">
-                            <i class="uil uil-file nav__icon"></i> Technical Stack
-                        </a>
-                    </li>
-                    
-                    <li class="nav__items">
-                        <a href="#portfolio" class="nav__link ">
-                            <i class="uil uil-user nav__icon"></i> Portfolio
-                        </a>
-                    </li>
-
-                    <li class="nav__items">
-                        <a href="#certificates" class="nav__link ">
-                            <i class="uil uil-scenery nav__icon"></i> Certificates
-                        </a>
-                    </li>
-
-                     <li class="nav__items">
-                        <a href="#Recommendations" class="nav__link ">
-                            <i class="uil uil-message nav__icon"></i> Recommendations
-                        </a>
-                    </li>
-
-                    <li class="nav__items">
-                        <a href="#contact" class="nav__link ">
-                            <i class="uil uil-message nav__icon"></i> Contact me
-                        </a>
-                    </li>
-                </ul>
-                <i class="uil uil-times nav__close" id="nav-close"></i>
-            </div>
-
-            <div class="nav__btns">
-
-<i class="uil uil-moon change-theme" id="theme-button"></i>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="uil uil-apps"></i>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-<main class="main">
-        
-        <section class="home section" id="home">
-            <div data-aos="fade-left" class="home__container container grid">
-                <div class="home__content grid">
-                    <div class="home__social">
-                        <a href="https://www.linkedin.com/in/abdelrahman-amawi/"
-                            target="_blank" rel="noopener noreferrer" class="home__social-icon">
-                            <i class="uil uil-linkedin-alt"></i>
-                            <a href="mailto:abdelrahman.amawii@gmail.com" target="_blank" rel="noopener noreferrer" class="home__social-icon">
-                            <i class="uil uil-envelope-add"></i>
-                        </a>
-                    <a href="https://wa.me/962795196712" target="_blank" rel="noopener noreferrer" class="home__social-icon">
-                            <i class="uil uil-whatsapp"></i>
-                        </a>
-                            
-                        </a>
-                        <a href="https://public.tableau.com/app/profile/abdelrahman.amawi/vizzes" target="_blank" rel="noopener noreferrer" class="home__social-icon">
-                             <img src="assets/img/tableau.png" alt="Tableau" class="home__social-img">
-                        </a>
-                        <a href="https://github.com/abdelrahmanamawii" target="_blank" rel="noopener noreferrer" class="home__social-icon">
-                            <i class="uil uil-github-alt"></i>
-                        </a>
-                    </div>
-
-                    <div data-aos="fade-right" class="home__img">
-                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <mask id="mask0" mask-type="alpha">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                            </mask>
-                            <g mask="url(#mask0)">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-
-                                <image class="home__blob-img" x="-15" y="-70" href="assets/img/perfil.png" />
-                            </g>
-                        </svg>
-                    </div>
-
-                    <div class="home__data">
-                        <h1 class="home_title">Hi, I'm Abdelrahman!</h1>
-                        <h3 class="home__subtitle">
-                            and I'm <span class="auto-input"></span>
-                        </h3>
-                        <p class="home__description">
-                            Turning large-scale operational data into dashboards, predictive models, and automated pipelines using SQL, Power BI, Python, and Tableau
-                        </p>
-                        <a href="#contact" class="button button--flex">
-                            Contact Me <i class="uil uil-message button__icon"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="home__scroll">
-                    <a href="#about" class="home__scroll-button button--flex">
-                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                        <span class="home__scroll-name"> Scroll down</span>
-                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-<section class="about section" id="about">
-            <h2 class="section__title">Professional Summary</h2>
-            <span class="section__subtitle"></span>
-
-            <div data-aos="fade-left" class="about__container container grid">
-                <div class="about__data">
-                    <p class="about__description">
-                        Data Analyst with 8+ years turning large-scale operational data into dashboards, predictive
-                        models, and automated pipelines, including compliance BI systems tracking 40,000+ monthly
-                        screenings and churn-prediction/NLP models scoring 200,000+ client records. I work
-                        end-to-end: SQL and Python for data engineering, statistical modeling for prediction, and
-                        Power BI for delivery.
-                    </p>
-
-                    <div class="about_info">
-                        <div>
-                            <span class="about__info-title">8+</span>
-                            <span class="about__info-name">Years <br />
-                                of Experience</span>
-                        </div>
-                        <div>
-                            <span class="about__info-title">20+</span>
-                            <span class="about__info-name">Dashboards <br />
-                                & Automations</span>
-                        </div>
-                        <div>
-                            <span class="about__info-title">$850K+</span>
-                            <span class="about__info-name">Operational<br />
-                                Savings</span>
-                        </div>
-                    </div>
-
-                    <div class="about__buttons">
-                        <a download="" href="assets/pdf/CV Abdelrahman Amawi.pdf" class="button button--flex">
-                            Download CV <i class="uil uil-file-download button__icon"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-<section class="experience section" id="experience">
-    <h2 class="section__title">Professional Experience</h2>
-    <span class="section__subtitle">Where I've applied analytics, automation, and CX Program Management. <i>More on CV</i></span>
-
-    <div class="experience__container container grid">
-
-<div class="experience__card">
-            <h3 class="experience__title">CX Data Analyst</h3>
-            <span class="experience__company">
-    <img src="assets/img/clarit-logo-new.png" alt="Wuduh (Clarity)" class="experience__logo clarity-logo">
-    · Amman, Jordan - Data & Analytics
-</span>
-
-            <p class="experience__description">
-                Built and automated a production-grade data pipeline directly against PostgreSQL, engineered predictive churn and NLP models (scikit-learn) to quantify client attrition risk across 200,000+ records and identify $590K+ in at-risk program revenue, and resolved critical data-integrity issues in a live Power BI/Fabric reporting system to enable fully automated daily refresh.
-            </p>
-
-            <div class="experience__tags">
-                <span>PostgreSQL</span>
-                <span>Python</span>
-                <span>Power BI</span>
-                <span>Predictive Modeling</span>
-                <span>Pipeline Automation</span>
-            </div>
-        </div>
-
-<div class="experience__card">
-            <h3 class="experience__title">Compliance Systems Analyst</h3>
-            <span class="experience__company">
-    <img src="assets/img/aramex-logo.png" alt="Aramex" class="experience__logo">
-    · Amman, Jordan - Governance, Risk, and Compliance
-</span>
-
-            <p class="experience__description">
-                Designed and deployed interactive compliance dashboards in Power BI, using Power Query for ETL workflows, DAX for advanced calculations, and automated refresh pipelines to deliver real-time insights across 40,000+ monthly screenings and CAPA trends for stronger audit readiness.
-            </p>
-
-            <div class="experience__tags">
-                <span>Power BI</span>
-                <span>Power Query</span>
-                <span>DAX</span>
-                <span>Compliance Analytics</span>
-                <span>Automation</span>
-                <span>AWS Cloud</span>
-            </div>
-        </div>
-
-<div class="experience__card">
-            <h3 class="experience__title">Support Operations Analyst</h3>
-            <span class="experience__company">
-    <img src="assets/img/amazon-logo.png" alt="Amazon" class="experience__logo amazon-logo">
-    · Amman, Jordan - Customer Experience, Concessions
-</span>
-
-            <p class="experience__description">
-                Led regional Andon programs focused on identifying and resolving defective processes and products across MENA operations, contributing to $100K+ in annual concession savings and reducing 50K+ defects through structured root-cause analysis, operational deep dives, and Agile execution.
-            </p>
-
-            <div class="experience__tags">
-                <span>Operational Analytics</span>
-                <span>Root Cause Analysis</span>
-                <span>Agile</span>
-                <span>Defect Reduction</span>
-                <span>Tableau</span>
-            </div>
-        </div>
-
+<main>
+<section class="g hero" id="home"><div class="inner">
+  <div class="hero-grid">
+    <div data-aos="fade-up">
+      <p class="hello">Hi, I'm Abdelrahman, a Business Data Analyst.</p>
+      <h1>I build the pipelines and models a business runs on.</h1>
+      <p class="lead">8+ years turning large-scale operational data into dashboards, predictive and NLP models, and automated pipelines. End to end: SQL and Python for data engineering, statistical modelling for prediction, and Power BI for delivery.</p>
+      <div class="actions">
+        <a class="btn solid" href="#work">See the work <i class="uil uil-arrow-down"></i></a>
+        <a class="btn soft" href="assets/pdf/CV Abdelrahman Amawi.pdf" download>Download CV <i class="uil uil-file-download"></i></a>
+      </div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/abdelrahman-amawi/" target="_blank" rel="noopener noreferrer"><i class="uil uil-linkedin"></i>LinkedIn</a>
+        <a href="https://github.com/abdelrahmanamawii" target="_blank" rel="noopener noreferrer"><i class="uil uil-github-alt"></i>GitHub</a>
+        <a href="https://public.tableau.com/app/profile/abdelrahman.amawi/vizzes" target="_blank" rel="noopener noreferrer"><img src="assets/img/tableau.png" alt="">Tableau Public</a>
+        <a href="mailto:abdelrahman.amawii@gmail.com"><i class="uil uil-envelope"></i>Email</a>
+        <a href="https://wa.me/962795196712" target="_blank" rel="noopener noreferrer"><i class="uil uil-whatsapp"></i>WhatsApp</a>
+      </div>
     </div>
-</section>
-
-<section class="skills section" id="skills">
-    <h2 class="section__title">Technical Stack</h2>
-    <span class="section__subtitle">The languages, platforms, and frameworks behind the dashboards and models I build</span>
-
-    <div data-aos="fade-up" class="skills__container container grid">
-
-<div class="skills__card">
-            <h3 class="skills__category">Programming & Query Languages</h3>
-
-            <div class="skills__items">
-                <div class="skills__item">
-                    <img src="assets/img/sql.png" alt="SQL" class="skills__logo">
-                    <span>SQL</span>
-                </div>
-
-                <div class="skills__item">
-                    <img src="assets/img/python.png" alt="Python" class="skills__logo">
-                    <span>Python</span>
-                </div>
-
-                <div class="skills__item">
-                    <img src="assets/img/dax.png" alt="HTML" class="skills__logo">
-                    <span>DAX</span>
-                </div>
-
-                <div class="skills__item">
-                    <img src="assets/img/html.png" alt="HTML" class="skills__logo">
-                    <span>HTML</span>
-                </div>
-
-                <div class="skills__item">
-                    <img src="assets/img/postgres.png" alt="PostgreSQL" class="skills__logo">
-                    <span>PostgreSQL</span>
-                </div>
-
-                <div class="skills__item">
-                    <img src="assets/img/pandas.png" alt="pandas" class="skills__logo">
-                    <span>pandas</span>
-                </div>
-
-                <div class="skills__item">
-                    <img src="assets/img/numpy.png" alt="NumPy" class="skills__logo">
-                    <span>NumPy</span>
-                </div>
-
-                <div class="skills__item">
-                    <img src="assets/img/scikit.png" alt="scikit-learn" class="skills__logo">
-                    <span>scikit-learn</span>
-                </div>
-            </div>
-        </div>
-
-<div class="skills__card">
-            <h3 class="skills__category">Analytics & BI Tools</h3>
-
-            <div class="skills__items">
-                <div class="skills__item">
-                    <img src="assets/img/powerbi.png" alt="Power BI" class="skills__logo">
-                    <span>Power BI</span>
-                </div>
-
-                <div class="skills__item">
-                    <img src="assets/img/tableau.png" alt="Tableau" class="skills__logo">
-                    <span>Tableau</span>
-                </div>
-
-                <div class="skills__item">
-                    <img src="assets/img/quicksight.png" alt="QuickSight" class="skills__logo">
-                    <span>QuickSight</span>
-                </div>
-
-                <div class="skills__item">
-                    <img src="assets/img/excel.png" alt="Excel" class="skills__logo">
-                    <span>Microsoft Excel</span>
-                </div>
-
-                <div class="skills__item">
-                    <img src="assets/img/fabric.png" alt="Microsoft Fabric" class="skills__logo">
-                    <span>Microsoft Fabric</span>
-                </div>
-            </div>
-        </div>
-
-<div class="skills__card">
-            <h3 class="skills__category">Data & Cloud Tools</h3>
-
-            <div class="skills__items">
-                <div class="skills__item">
-                    <img src="assets/img/bigquery.png" alt="BigQuery" class="skills__logo">
-                    <span>Google BigQuery</span>
-                </div>
-
-                <div class="skills__item">
-                    <img src="assets/img/sheets.png" alt="Google Sheets" class="skills__logo">
-                    <span>Google Sheets</span>
-                </div>
-
-                <div class="skills__item">
-                    <img src="assets/img/googleanalytics.png" alt="Google Analytics" class="skills__logo">
-                    <span>Google Analytics</span>
-                </div>
-
-                <div class="skills__item">
-                    <img src="assets/img/sharepoint.png" alt="SharePoint" class="skills__logo">
-                    <span>SharePoint</span>
-                </div>
-
-                <div class="skills__item">
-                    <img src="assets/img/vscode.png" alt="VS Code" class="skills__logo">
-                    <span>VS Code</span>
-                </div>
-
-                <div class="skills__item">
-                    <img src="assets/img/streamlit.png" alt="Streamlit" class="skills__logo">
-                    <span>Streamlit</span>
-                </div>
-            </div>
-        </div>
-
-<div class="skills__card">
-            <h3 class="skills__category">Analytical Methods</h3>
-
-            <div class="skills__items skills__items--text">
-                <span>EDA</span>
-                <span>Root Cause Analysis</span>
-                <span>KPI Tracking</span>
-                <span>Dashboard Design</span>
-                <span>Data Cleaning</span>
-                <span>Trend Analysis</span>
-                <span>Automation Workflows</span>
-                <span>Statistical Modeling</span>
-                <span>Survival Analysis</span>
-                <span>NLP & Text Classification</span>
-                <span>REST API Integration (OAuth2/JWT)</span>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section class="portfolio section" id="portfolio">
-            <h2 class="section__title">Portfolio</h2>
-            <span class="section__subtitle">Most recent work</span>
-
-            <div data-aos="fade-right" class="portfolio__container container swiper-container">
-                <div class="swiper-wrapper">
-
-<div class="portfolio__content swiper-slide">
-                        <h3 class="portfolio__title">Meridian Case Study - Power BI</h3>
-
-                        <div class="portfolio__image-link">
-                            <img src="assets/img/Meridian Cover Photo.png" alt="Meridian Debt Solutions Churn Dashboard" class="portfolio__img portfolio__img--dashboard">
-
-                            <div class="portfolio__overlay">
-    <div class="portfolio__overlay-content">
-
-        <p>
-            A segment-driven churn analysis for a debt-relief business, ranking client
-            risk by combining hardship, credit, and debt-load signals to quantify
-            revenue at risk and pinpoint where retention effort matters most.
-        </p>
-
-        <div class="portfolio__links">
-
-            <a href="https://docs.google.com/presentation/d/e/2PACX-1vRsaQ6nKHiiiEIIraxF8L_EWsDf7nTuWxad0UW79ZwUxbAdQCFWSg7C3B7syh_2bA/pub?start=false&loop=false&delayms=5000&pli=1&slide=id.p1"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="portfolio__link">
-               View Executive Brief
-            </a>
-
-            <a href="https://app.powerbi.com/view?r=eyJrIjoiM2JlYThjYTctNjc2ZS00YjgwLWExODEtYjgzMDEwNzI4ZGRkIiwidCI6IjQxYzU4YzU5LTAxYzAtNDhhMC1hYTVlLWQ0ZDZhNzA3MmNiOSJ9"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="portfolio__link">
-               Explore Dashboard
-            </a>
-
-            <a href="https://medium.com/@abdelrahman.amawii/from-enrollment-data-to-a-retention-playbook-diagnosing-churn-risk-in-a-debt-relief-program-with-1f5253802d37"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="portfolio__link">
-               Read Case Study
-            </a>
-
-        </div>
-
-    </div>
-</div>
-                        </div>
-                    </div>
-
-<div class="portfolio__content swiper-slide">
-                        <h3 class="portfolio__title">Talabat Case Study - Tableau</h3>
-
-                        <div class="portfolio__image-link">
-                            <img src="assets/img/portfolio1.png" alt="Talabat Case Study Dashboard" class="portfolio__img portfolio__img--dashboard">
-
-                            <div class="portfolio__overlay">
-    <div class="portfolio__overlay-content">
-
-        <p>
-            A SQL-driven case study analyzing food-delivery order and customer data to uncover growth
-            opportunities, from raw data exploration to an executive-ready Tableau dashboard.
-        </p>
-
-        <div class="portfolio__links">
-
-            <a href="https://docs.google.com/presentation/d/e/2PACX-1vS1y6pnlVBEV_nMxvz5khBdOFk8LsIFZsYh3Wd5_Rfao2FdhV49Pmiu8sI7bi2xh-YMj6z2gFjkakgO/pub?start=true&loop=true&delayms=3000"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="portfolio__link">
-               View Executive Brief
-            </a>
-
-            <a href="https://public.tableau.com/app/profile/abdelrahman.amawi/viz/Talabat_Study_Case_Dummy_Data_Abdelrahman/Q1Q2Q11"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="portfolio__link">
-               Explore Dashboard
-            </a>
-
-            <a href="https://medium.com/@abdelrahman.amawii/from-business-questions-to-executive-dashboards-solving-a-food-delivery-analytics-case-with-sql-b346ccad16e1"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="portfolio__link">
-               Read Case Study
-            </a>
-
-        </div>
-
-    </div>
-</div>
-                        </div>
-                    </div>
-
-<div class="portfolio__content swiper-slide">
-                        <h3 class="portfolio__title">WUDUH Case Study - Power BI</h3>
-
-                        <div class="portfolio__image-link">
-                            <img src="assets/img/portfolio2.png" alt="Talabat Case Study Dashboard" class="portfolio__img portfolio__img--dashboard">
-
-                           <div class="portfolio__overlay">
-    <div class="portfolio__overlay-content">
-
-        <p>
-            A Power BI case study for a debt-relief services business, translating raw operational and
-            customer-behavior data into an interactive executive dashboard.
-        </p>
-
-        <div class="portfolio__links">
-
-            <a href="https://docs.google.com/presentation/d/e/2PACX-1vRUTPtRN264j10CXT8_vvZj6CX4AfmJkRxcDNuQ50cy8PmEAe_yg4DndRVn5kN1d-AARBdchue-bd3C/pub?start=true&loop=true&delayms=3000"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="portfolio__link">
-               View Executive Brief
-            </a>
-
-            <a href="https://app.powerbi.com/view?r=eyJrIjoiOGY4MjBkZmUtNGQ2Yy00MGEyLWIyY2MtYmZjYzU0NjMwOWIxIiwidCI6IjQxYzU4YzU5LTAxYzAtNDhhMC1hYTVlLWQ0ZDZhNzA3MmNiOSJ9"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="portfolio__link">
-               Explore Dashboard
-            </a>
-
-            <a href="https://medium.com/@abdelrahman.amawii/from-raw-data-to-business-intelligence-a-full-stack-data-analytics-case-study-1b3baec3ef09"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="portfolio__link">
-               Read Case Study
-            </a>
-
-        </div>
-
-    </div>
-</div>
-                        </div>
-                    </div>
-
-<div class="portfolio__content swiper-slide">
-                        <h3 class="portfolio__title">Stale Statistics - Postgres</h3>
-
-                        <div class="portfolio__image-link">
-                            <img src="assets/img/SQL Cover Photo.png" alt="Postgres Stale Statistics Case Study" class="portfolio__img portfolio__img--dashboard">
-
-                            <div class="portfolio__overlay">
-    <div class="portfolio__overlay-content">
-
-        <p>
-            A query-performance deep dive diagnosing a stale planner-statistics bug in Postgres,
-            reproducing a 23x row-estimate error from scratch and showing exactly why the
-            fix was one ANALYZE, not a new index.
-        </p>
-
-        <div class="portfolio__links">
-
-            <a href="https://medium.com/@abdelrahman.amawii/the-missing-indexes-werent-the-problem-diagnosing-a-stale-statistics-bug-in-postgres-9a0cfeb80c67"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="portfolio__link">
-               Read Case Study
-            </a>
-
-            <a href="https://gist.github.com/abdelrahmanamawii/448c5bde2f9f653394962ea7b7a576d4"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="portfolio__link">
-               View SQL &amp; Plan Output
-            </a>
-
-        </div>
-
-    </div>
-</div>
-                        </div>
-                    </div>
-
-<div class="portfolio__content swiper-slide">
-                        <h3 class="portfolio__title">Crestline Case Study - Power BI</h3>
-
-                        <div class="portfolio__image-link">
-                            <img src="assets/img/Crestline.png" alt="Crestline Financial Solutions LTV Dashboard" class="portfolio__img portfolio__img--dashboard">
-
-                            <div class="portfolio__overlay">
-    <div class="portfolio__overlay-content">
-
-        <p>
-            A cohort-based customer lifetime value analysis for a debt-relief business, quantifying
-            blended LTV from program-fee and legal-plan collections across monthly cancellation and
-            graduation cohorts, with a fully interactive dashboard for slicing by company, vendor,
-            and plan type.
-        </p>
-
-        <div class="portfolio__links">
-
-            <a href="https://docs.google.com/presentation/d/e/2PACX-1vROQ0AwOLb0-IkrAJd-Ew49Ar6a-sYtEQXz1Q_v-OgwuiZj72VADltIVqlIAlwsXbOgluHCkivnryMq/pub?start=false&loop=false&delayms=3000"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="portfolio__link">
-               View Executive Brief
-            </a>
-
-            <a href="https://app.powerbi.com/view?r=eyJrIjoiMjIxOTdmNzItZWU4My00ZTFkLTkyZDgtZWJmZWI3NzRjMDgxIiwidCI6IjQxYzU4YzU5LTAxYzAtNDhhMC1hYTVlLWQ0ZDZhNzA3MmNiOSJ9"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="portfolio__link">
-               Explore Dashboard
-            </a>
-
-            <a href="https://medium.com/@abdelrahman.amawii/from-cancellation-dates-to-a-cash-number-diagnosing-customer-lifetime-value-in-a-debt-relief-8c068841acbc"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="portfolio__link">
-               Read Case Study
-            </a>
-
-        </div>
-
-    </div>
-</div>
-                        </div>
-                    </div>
-                </div>
-
-<div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                </div>
-
-<div class="swiper-pagination swiper-pagination-portfolio"></div>
-            </div>
-        </section>
-
-<section class="certificate section" id="certificates">
-            <h2 class="section__title">Certificates</h2>
-            <span class="section__subtitle">Full list of Certificates can be found <a class="testimonial__link" href="https://www.linkedin.com/in/abdelrahman-amawi/details/certifications/" target="_blank" rel="noopener noreferrer">here</a></span>
-            <span class="section__subtitle">Scroll or Slide below to view next <i class="uil uil-corner-right-down"></i></span>
-
-            <div data-aos="fade-up" class="certificate__container container swiper-container">
-                <div class="swiper-wrapper">
-                    
-                    <div class="certificate__content swiper-slide">
-                        <img src="assets/img/AWS Cloud Quest Generative AI Practitioner.png" alt="AWS Cloud Quest Generative AI Practitioner" class="certificate__img">
-
-                        <div class="certificate__data">
-                            <p>Generative AI Practitioner</p>
-                            <a href="assets/pdf/AWS Cloud Quest Generative AI Practitioner.pdf"
-                                class="button button--flex button--small portfolio_-button">
-                                Preview
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-<div class="certificate__content swiper-slide">
-                        <img src="assets/img/AWS Cloud Quest Cloud Practioner.png" alt="AWS Cloud Quest Cloud Practitioner" class="certificate__img">
-
-                        <div class="certificate__data">
-                            <p>AWS Cloud Quest Cloud Practitioner</p>
-                            <a href="assets/pdf/AWS Cloud Quest Cloud Practioner.pdf"
-                                class="button button--flex button--small portfolio_-button">
-                                Preview
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-<div class="certificate__content swiper-slide">
-                        <img src="assets/img/CS ACES Certification Stage 2.jpeg" alt="CS ACES Certification Stage 2" class="certificate__img">
-
-                        <div class="certificate__data">
-                            <p>CS ACES Certification Stage 2</p>
-                            <a href="assets/pdf/CS ACES Certification Stage 2.pdf"
-                                class="button button--flex button--small portfolio_-button">
-                                Preview
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-<div class="certificate__content swiper-slide">
-                        <img src="assets/img/EFSET.png" alt="EF SET English Certificate" class="certificate__img">
-
-                        <div class="certificate__data">
-                            <p>EF SET English Certificate</p>
-                            <a href="assets/pdf/EF SET Certificate.pdf"
-                                class="button button--flex button--small portfolio_-button">
-                                Preview
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-<div class="swiper-pagination swiper-pagination-certificate"></div>
-            </div>
-        </section>
-
-<section class="testimonial section" id="Recommendations"> 
-            <h2 class="section__title">Recommendations</h2>
-            <span class="section__subtitle">What colleagues say about my work - All recommendations can be found <a class="testimonial__link" href="https://www.linkedin.com/in/abdelrahman-amawi/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="noopener noreferrer">here</a></span>
-            <span class="section__subtitle swiper-error">Swipe below to view next <i class="uil uil-corner-right-down"></i> </span>
-
-            <div data-aos="fade-in" class="testimonial__container container swiper-container">
-                <div class="swiper-wrapper">
-
-<div class="testimonial__content swiper-slide">
-                        <div class="testimonial__data">
-                            <div class="testimonial__header">
-                                <img src="assets/img/testimonial1.jpg" alt="" class="testimonial__img">
-
-                                <div>
-                                    <h3 class="testimonial__name">
-    Prateek Saxena
-    <a href="https://www.linkedin.com/in/prateeksaxena87/" target="_blank" rel="noopener noreferrer"
-        class="testimonial__linkedin">
-        <i class="uil uil-linkedin-alt"></i>
+    <figure class="portrait" data-aos="fade-left">
+      <div class="frame"><img src="assets/img/headshot.png" alt="Abdelrahman Amawi" width="682" height="888"></div>
+      <figcaption><b>Business Data Analyst</b>Amman, Jordan</figcaption>
+    </figure>
+  </div>
+  <div class="figures num" data-aos="fade-up">
+    <div class="figure glass"><b>8+</b><span>years of experience</span></div>
+    <div class="figure glass"><b>20+</b><span>dashboards and automations</span></div>
+    <div class="figure glass"><b>200K+</b><span>client records scored by my models</span></div>
+    <div class="figure glass"><b>$850K+</b><span>operational savings</span></div>
+  </div>
+</div></section>
+
+<section class="g sec" id="experience" aria-labelledby="exp-h"><div class="inner">
+  <h2 class="big" id="exp-h" data-aos="fade-up">Experience</h2>
+  <p class="take" data-aos="fade-up">Analytics, automation and CX programme work across three companies. More detail in the <a href="assets/pdf/CV Abdelrahman Amawi.pdf" download>CV</a>.</p>
+  <ol class="roles">
+    <li class="role glass" data-aos="fade-up">
+      <div class="org"><div class="logo clarity"><img class="inv" src="assets/img/clarit-logo-new.png" alt="Clarity"></div><span class="where">Amman, Jordan<br>Data and Analytics</span></div>
+      <div><h3>Business Data Analyst</h3><p>Built and automated a production-grade data pipeline directly against PostgreSQL, engineered predictive churn and NLP models (scikit-learn) to quantify client attrition risk across 200,000+ records and identify $590K+ in at-risk program revenue, and resolved critical data-integrity issues in a live Power BI and Fabric reporting system to enable fully automated daily refresh.</p>
+        <div class="tags"><span>PostgreSQL</span><span>Python</span><span>Power BI</span><span>Predictive modelling</span><span>Pipeline automation</span></div></div>
+    </li>
+    <li class="role glass" data-aos="fade-up">
+      <div class="org"><div class="logo"><img src="assets/img/aramex-logo.png" alt="Aramex"></div><span class="where">Amman, Jordan<br>Governance, Risk and Compliance</span></div>
+      <div><h3>Compliance Systems Analyst</h3><p>Designed and deployed interactive compliance dashboards in Power BI, using Power Query for ETL, DAX for advanced calculations and automated refresh pipelines, delivering real-time insight across 40,000+ monthly screenings and CAPA trends for stronger audit readiness.</p>
+        <div class="tags"><span>Power BI</span><span>Power Query</span><span>DAX</span><span>Compliance analytics</span><span>Automation</span><span>AWS Cloud</span></div></div>
+    </li>
+    <li class="role glass" data-aos="fade-up">
+      <div class="org"><div class="logo amazon"><img class="inv" src="assets/img/amazon-logo.png" alt="Amazon"></div><span class="where">Amman, Jordan<br>Customer Experience, Concessions</span></div>
+      <div><h3>Support Operations Analyst</h3><p>Led regional Andon programmes identifying and resolving defective processes and products across MENA operations, contributing to $100K+ in annual concession savings and reducing 50K+ defects through structured root-cause analysis, operational deep dives and Agile execution.</p>
+        <div class="tags"><span>Operational analytics</span><span>Root cause analysis</span><span>Agile</span><span>Defect reduction</span><span>Tableau</span></div></div>
+    </li>
+  </ol>
+</div></section>
+
+<section class="g sec" id="work" aria-labelledby="work-h"><div class="inner">
+  <h2 class="big" id="work-h" data-aos="fade-up">Selected work</h2>
+  <p class="take" data-aos="fade-up">Case studies with the dashboards, briefs and write-ups behind them. Company names and figures in public pieces are anonymised.</p>
+
+  <article class="feature glass" data-aos="fade-up">
+    <a class="shot" href="pipeline/" aria-label="Open the client data pipeline: 28 of 28 steps, 254,513 rows, 140 columns, about 30 minutes">
+      <div class="journey" aria-hidden="true">
+        <div class="jh"><b>Daily refresh</b><span>28 of 28 steps</span></div>
+        <svg viewBox="0 44 400 368" role="presentation"><path class="jbase" d="M80,64 H340 A50,50 0 0 1 340,164 H60 A50,50 0 0 0 60,264 H340 A50,50 0 0 1 340,364 H80"/><path class="jline" pathLength="1" d="M80,64 H340 A50,50 0 0 1 340,164 H60 A50,50 0 0 0 60,264 H340 A50,50 0 0 1 340,364 H80"/>
+        <g class="n start" style="--d:0.25s"><circle class="ring" cx="80" cy="64" r="9"/><circle class="core" cx="80" cy="64" r="4"/><text class="nm" x="80" y="91">Sources</text><text class="ct" x="80" y="106">6 systems</text></g>
+        <g class="n" style="--d:0.42s"><circle class="dot" cx="200" cy="64" r="6"/><text class="nm" x="200" y="91">Prepare</text><text class="ct" x="200" y="106">1 step</text></g>
+        <g class="n" style="--d:0.59s"><circle class="dot" cx="320" cy="64" r="6"/><text class="nm" x="320" y="91">Extract</text><text class="ct" x="320" y="106">1 step</text></g>
+        <g class="n" style="--d:0.76s"><circle class="dot" cx="320" cy="164" r="6"/><text class="nm" x="320" y="191">Model and segment</text><text class="ct" x="320" y="206">5 steps</text></g>
+        <g class="n" style="--d:0.93s"><circle class="dot" cx="200" cy="164" r="6"/><text class="nm" x="200" y="191">Calls</text><text class="ct" x="200" y="206">4 steps</text></g>
+        <g class="n" style="--d:1.10s"><circle class="dot" cx="80" cy="164" r="6"/><text class="nm" x="80" y="191">Texts</text><text class="ct" x="80" y="206">2 steps</text></g>
+        <g class="n" style="--d:1.27s"><circle class="dot" cx="80" cy="264" r="6"/><text class="nm" x="80" y="291">App and portal</text><text class="ct" x="80" y="306">4 steps</text></g>
+        <g class="n" style="--d:1.44s"><circle class="dot" cx="200" cy="264" r="6"/><text class="nm" x="200" y="291">Call history</text><text class="ct" x="200" y="306">2 steps</text></g>
+        <g class="n" style="--d:1.61s"><circle class="dot" cx="320" cy="264" r="6"/><text class="nm" x="320" y="291">Engagement</text><text class="ct" x="320" y="306">3 steps</text></g>
+        <g class="n" style="--d:1.78s"><circle class="dot" cx="320" cy="364" r="6"/><text class="nm" x="320" y="391">Cancel timing</text><text class="ct" x="320" y="406">1 step</text></g>
+        <g class="n" style="--d:1.95s"><circle class="dot" cx="200" cy="364" r="6"/><text class="nm" x="200" y="391">Complaint feeds</text><text class="ct" x="200" y="406">5 steps</text></g>
+        <g class="n end" style="--d:2.12s"><circle class="ring" cx="80" cy="364" r="9"/><circle class="core" cx="80" cy="364" r="4"/><text class="nm" x="80" y="391">Power BI</text><text class="ct" x="80" y="406">3 dashboards</text></g></svg>
+        <div class="jf num"><span><b>254,513</b> rows</span><span><b>140</b> columns</span><span><b>~30</b> min</span></div>
+      </div>
+      <span class="cue" aria-hidden="true"><span class="pulse"></span>Interactive: explore all 28 steps <i class="uil uil-arrow-right"></i></span>
     </a>
-    </h3>
-                                    <span class="testimonial__client">Head of MENA CX - Amazon</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="testimonial__description">
-                            I have had the privilege of working with Abdelrahman since 2021, and it has been a pleasure to watch his
-                            professional growth over the years. From the start, Abdelrahman has stood out for his strong sense of ownership,
-                            curiosity, and a genuine eagerness to learn.
-                        </p>
-                        
-                        <p class="testimonial__description">
-                            One of the things I admire most about him is his ability to identify opportunities to improve how we work. He took
-                            the initiative to self-learn various AI tools and techniques and successfully applied them to streamline several
-                            processes within the team. This not only enhanced efficiency but also inspired others to think more creatively about
-                            leveraging technology in our day-to-day work.
-                        </p>
-                        
-                        <p class="testimonial__description">
-                            Abdelrahman consistently delivers high-quality output, communicates clearly, and approaches every challenge with a
-                            solution-oriented mindset. He brings a great mix of analytical thinking and enthusiasm that makes him a valuable
-                            member of any team.
-                        </p>
-                    </div>
-                    
-                    <div class="testimonial__content swiper-slide">
-                        <div class="testimonial__data">
-                            <div class="testimonial__header">
-                                <img src="assets/img/testimonial2.jpg" alt="" class="testimonial__img">
+    <div class="body">
+      <p class="kicker">Featured project</p>
+      <h3>Client data pipeline: one file the business runs on</h3>
+      <p>An interactive map of the 28-step daily pipeline I built, from a production PostgreSQL database, a phone system, texts, a mobile app and surveys to three Power BI dashboards.</p>
+      <ul class="num">
+        <li><b>6</b>source systems integrated into one row per client</li>
+        <li><b>91%</b>accurate hardship classifier (TF-IDF, logistic regression)</li>
+        <li><b>254K</b>clients, 140 columns, refreshed daily in about 30 minutes</li>
+        <li><b>15x</b>faster main query: about 2 hours to about 8 minutes, output unchanged</li>
+      </ul>
+      <div class="tags"><span>PostgreSQL</span><span>Python</span><span>scikit-learn</span><span>Streamlit</span><span>RingCentral API</span><span>Power BI</span></div>
+      <div class="links" style="gap:10px">
+        <a class="btn solid" href="pipeline/">Explore the pipeline <i class="uil uil-arrow-right"></i></a>
+      </div>
+    </div>
+  </article>
 
-                                <div>
-                                     <h3 class="testimonial__name">
-    Rohan Kedia
-    <a href="https://ae.linkedin.com/in/rohan-kedia" target="_blank" rel="noopener noreferrer"
-        class="testimonial__linkedin">
-        <i class="uil uil-linkedin-alt"></i>
-    </a>
-    </h3>
-                                    <span class="testimonial__client">Sr. Program Manager - Amazon CX</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="testimonial__description">
-                            I had the pleasure of directly managing Amawi, and he quickly stood out as an early adopter of AI-driven solutions
-                            within the team. His forward-thinking mindset and ability to leverage emerging technologies translated into tangible
-                            results and measurable impact for our projects.
-                        </p>
-                        
-                        <p class="testimonial__description">
-                            Amawi combines technical curiosity with strong execution, ensuring that ideas don't just stay theoretical, they
-                            turn into real outcomes. Beyond his individual contributions, he is a true team player, always open to
-                            collaboration, knowledge-sharing, and helping others navigate new tools and approaches.
-                        </p>
-                        
-                        <p class="testimonial__description">
-                            His adaptability, results orientation, and collaborative nature make him a valuable asset to any team embracing
-                            innovation and change. I'd highly recommend Amawi to any organization looking for a professional who can bridge
-                            technology and teamwork seamlessly.
-                        </p>
-                    </div>
-                    
-                    <div class="testimonial__content swiper-slide">
-                        <div class="testimonial__data">
-                            <div class="testimonial__header">
-                                <img src="assets/img/testimonial3.jpg" alt="" class="testimonial__img">
-
-                                <div>
-                                    <h3 class="testimonial__name">
-    Sreenidhi Vijayan
-    <a href="https://in.linkedin.com/in/sreenidhivijayan" target="_blank" rel="noopener noreferrer"
-        class="testimonial__linkedin">
-        <i class="uil uil-linkedin-alt"></i>
-    </a>
-    </h3>
-                                    <span class="testimonial__client">Business Analyst - Amazon CX</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="testimonial__description">
-                            Abdelrahman is one of the smartest and most adaptable people I've worked with. He self-taught himself
-                            advanced Al and tech skills and used them to automate processes we never thought possible, delivering
-                            real results. His ability to combine technical expertise with practical problem solving skills is truly
-                            impressive.  </p>
-                        <p class="testimonial__description">Beyond his skills, Abdelrahman brings incredible energy to the workplace - he's genuinely
-                            fun to work with and keeps the team motivated. He's an incredible team player, always ready to help
-                            others succeed. I highly recommend Abdelrahman to any organization, and they would be lucky to work
-                            with him.</p>
-                    </div>
-                    
-                    <div class="testimonial__content swiper-slide">
-                        <div class="testimonial__data">
-                            <div class="testimonial__header">
-                                <img src="assets/img/testimonial4.jpg" alt="" class="testimonial__img">
-
-                                <div>
-                                    <h3 class="testimonial__name">Norhan Salah
-    <a href="https://eg.linkedin.com/in/norhan-salah-4670a71b1" target="_blank" rel="noopener noreferrer"
-        class="testimonial__linkedin">
-        <i class="uil uil-linkedin-alt"></i>
-    </a>
-    </h3>
-                                    <span class="testimonial__client">Retail Vendor Manager - Amazon Business</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="testimonial__description">
-                            I had the pleasure of working with Abdelrahman Amawi, and I was truly impressed by his dedication and
-                            proactive mindset. Amawi consistently went above and beyond his core responsibilities, supporting my
-                            team in automating several of our key processes ,a contribution that had a direct impact on efficiency
-                            and overall customer experience.</p>
-                        
-                        <p class="testimonial__description">What stood out most is his strong sense of ownership and his genuine drive for
-                            organizational
-                            excellence. He demonstrates great skill in diving deep, learning new areas quickly, and turning challenges
-                            into opportunities for improvement.</p>
-                        
-                        <p class="testimonial__description">Amawi is a true example of someone who embodies continuous learning and
-                            collaboration, and I highly
-                            recommend him to any team looking for a reliable, innovative, and customer-obsessed professional.</p>
-                        </div>
-                </div>
-
-<div class="swiper-pagination swiper-pagination-testimonial"></div>
-            </div>
-        </section>
-
-<section class="contact section" id="contact">
-            <h2 class="section__title">Contact Me</h2>
-            <span class="section__subtitle">Let's connect and work together!</span>
-
-            <div data-aos="fade-in" class="contact__container container grid">
-                <div>
-                    <div class="contact__information">
-                        <i class="uil uil-envelope contact__icon "></i>
-                        
-                        <div>
-                            <h3 class="contact__title">Email</h3>
-                            <span class="contact__subtitle"> abdelrahman.amawii@gmail.com</span>
-                        </div>
-                    </div>
-                    <div class="contact__information">
-                        <i class="uil uil-github-alt contact__icon"></i>
-                        <div>
-                            <h3 class="contact__title">Github</h3>
-                            <span class="contact__subtitle">https://github.com/abdelrahmanamawii </span>
-                        </div>
-                    </div>
-                </div>
-
-                <form action="https://formsubmit.co/abdelrahman.amawii@gmail.com" method="POST"
-                    class="contact__form grid">
-                    <div class="contact__inputs grid">
-                        <div class="contact__content">
-                            <label for="" class="contact__label">Your Name</label>
-                            <input name="name" type="text" class="contact__input">
-                        </div>
-                        <div class="contact__content">
-                            <label for="" class="contact__label">Your Email</label>
-                            <input name="email" type="email" class="contact__input">
-                        </div>
-                    </div>
-                    <div class="contact__content">
-                        <label for="" class="contact__label">Title</label>
-                        <input name="message" type="text" class="contact__input">
-                    </div>
-                    <div class="contact__content">
-                        <label for="" class="contact__label">Message</label>
-                        <textarea name="message" id="" cols="0" rows="7" class="contact__input"></textarea>
-                    </div>
-
-                    <div>
-                        <button type="submit" class="button button--flex">
-                            Send Message
-                            <i class="uil uil-message button__icon"></i>
-                        </button>
-
-                    </div>
-                </form>
-            </div>
-        </section>
-    </main>
-
-<footer class="footer">
-        <div class="footer__bg">
-            <div class="footer__container container grid">
-                <div>
-                    <h1 class="footer__title">Abdelrahman</h1>
-                    <span class="footer__subtitle">Data Analytics & Automation Specialist </span>
-                </div>
-
-<div class="footer__socials">
-                    <a href="https://www.linkedin.com/in/abdelrahman-amawi/"
-                        target="_blank" rel="noopener noreferrer" class="footer__social">
-                        <i class="uil uil-linkedin"></i>
-                    </a>
-
-                    <a href="https://github.com/abdelrahmanamawii" target="_blank" rel="noopener noreferrer" class="footer__social">
-                        <i class="uil uil-github-alt"></i>
-                    </a>
-
-                    <a href="https://wa.me/962795196712" target="_blank" rel="noopener noreferrer" class="footer__social">
-                        <i class="uil uil-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
-            <p class="footer__copy">&copy; 2026 Abdelrahman Amawi | All Rights Reserved</p>
+  <div class="cases">
+    <article class="case glass" data-aos="fade-up">
+      <div class="shot well"><img src="assets/img/SQL Cover Photo.png" alt="Postgres stale statistics case study cover" loading="lazy"></div>
+      <div class="body">
+        <p class="meta">PostgreSQL performance</p>
+        <h3>The missing indexes weren't the problem</h3>
+        <p>A query-performance deep dive diagnosing a stale planner-statistics bug, reproducing a 23x row-estimate error from scratch and showing why the fix was one ANALYZE, not a new index.</p>
+        <div class="links">
+          <a href="https://medium.com/@abdelrahman.amawii/the-missing-indexes-werent-the-problem-diagnosing-a-stale-statistics-bug-in-postgres-9a0cfeb80c67" target="_blank" rel="noopener noreferrer"><i class="uil uil-book-open"></i>Read case study</a>
+          <a href="https://gist.github.com/abdelrahmanamawii/448c5bde2f9f653394962ea7b7a576d4" target="_blank" rel="noopener noreferrer"><i class="uil uil-brackets-curly"></i>SQL and plan output</a>
         </div>
-    </footer>
+      </div>
+    </article>
+    <article class="case glass" data-aos="fade-up">
+      <div class="shot well"><img src="assets/img/Meridian Cover Photo.png" alt="Meridian churn dashboard in Power BI" loading="lazy"></div>
+      <div class="body">
+        <p class="meta">Churn analysis, Power BI</p>
+        <h3>Meridian: where retention effort matters most</h3>
+        <p>A segment-driven churn analysis for a debt-relief business, ranking client risk by hardship, credit and debt-load signals to quantify revenue at risk.</p>
+        <div class="links">
+          <a href="https://app.powerbi.com/view?r=eyJrIjoiM2JlYThjYTctNjc2ZS00YjgwLWExODEtYjgzMDEwNzI4ZGRkIiwidCI6IjQxYzU4YzU5LTAxYzAtNDhhMC1hYTVlLWQ0ZDZhNzA3MmNiOSJ9" target="_blank" rel="noopener noreferrer"><i class="uil uil-chart-bar"></i>Dashboard</a>
+          <a href="https://docs.google.com/presentation/d/e/2PACX-1vRsaQ6nKHiiiEIIraxF8L_EWsDf7nTuWxad0UW79ZwUxbAdQCFWSg7C3B7syh_2bA/pub?start=false&loop=false&delayms=5000&pli=1&slide=id.p1" target="_blank" rel="noopener noreferrer"><i class="uil uil-presentation"></i>Executive brief</a>
+          <a href="https://medium.com/@abdelrahman.amawii/from-enrollment-data-to-a-retention-playbook-diagnosing-churn-risk-in-a-debt-relief-program-with-1f5253802d37" target="_blank" rel="noopener noreferrer"><i class="uil uil-book-open"></i>Case study</a>
+        </div>
+      </div>
+    </article>
+    <article class="case glass" data-aos="fade-up">
+      <div class="shot well"><img src="assets/img/Crestline.png" alt="Crestline customer lifetime value dashboard in Power BI" loading="lazy"></div>
+      <div class="body">
+        <p class="meta">Customer lifetime value, Power BI</p>
+        <h3>Crestline: from cancellation dates to a cash number</h3>
+        <p>A cohort-based lifetime value analysis, quantifying blended LTV from program-fee and legal-plan collections across monthly cancellation and graduation cohorts.</p>
+        <div class="links">
+          <a href="https://app.powerbi.com/view?r=eyJrIjoiMjIxOTdmNzItZWU4My00ZTFkLTkyZDgtZWJmZWI3NzRjMDgxIiwidCI6IjQxYzU4YzU5LTAxYzAtNDhhMC1hYTVlLWQ0ZDZhNzA3MmNiOSJ9" target="_blank" rel="noopener noreferrer"><i class="uil uil-chart-bar"></i>Dashboard</a>
+          <a href="https://docs.google.com/presentation/d/e/2PACX-1vROQ0AwOLb0-IkrAJd-Ew49Ar6a-sYtEQXz1Q_v-OgwuiZj72VADltIVqlIAlwsXbOgluHCkivnryMq/pub?start=false&loop=false&delayms=3000" target="_blank" rel="noopener noreferrer"><i class="uil uil-presentation"></i>Executive brief</a>
+          <a href="https://medium.com/@abdelrahman.amawii/from-cancellation-dates-to-a-cash-number-diagnosing-customer-lifetime-value-in-a-debt-relief-8c068841acbc" target="_blank" rel="noopener noreferrer"><i class="uil uil-book-open"></i>Case study</a>
+        </div>
+      </div>
+    </article>
+    <article class="case glass" data-aos="fade-up">
+      <div class="shot well"><img src="assets/img/portfolio2.png" alt="WUDUH operations dashboard in Power BI" loading="lazy"></div>
+      <div class="body">
+        <p class="meta">Full-stack analytics, Power BI</p>
+        <h3>WUDUH: from raw data to business intelligence</h3>
+        <p>A Power BI case study for a debt-relief services business, translating raw operational and customer-behaviour data into an interactive executive dashboard.</p>
+        <div class="links">
+          <a href="https://app.powerbi.com/view?r=eyJrIjoiOGY4MjBkZmUtNGQ2Yy00MGEyLWIyY2MtYmZjYzU0NjMwOWIxIiwidCI6IjQxYzU4YzU5LTAxYzAtNDhhMC1hYTVlLWQ0ZDZhNzA3MmNiOSJ9" target="_blank" rel="noopener noreferrer"><i class="uil uil-chart-bar"></i>Dashboard</a>
+          <a href="https://docs.google.com/presentation/d/e/2PACX-1vRUTPtRN264j10CXT8_vvZj6CX4AfmJkRxcDNuQ50cy8PmEAe_yg4DndRVn5kN1d-AARBdchue-bd3C/pub?start=true&loop=true&delayms=3000" target="_blank" rel="noopener noreferrer"><i class="uil uil-presentation"></i>Executive brief</a>
+          <a href="https://medium.com/@abdelrahman.amawii/from-raw-data-to-business-intelligence-a-full-stack-data-analytics-case-study-1b3baec3ef09" target="_blank" rel="noopener noreferrer"><i class="uil uil-book-open"></i>Case study</a>
+        </div>
+      </div>
+    </article>
+    <article class="case glass wide" data-aos="fade-up">
+      <div class="shot well"><img src="assets/img/portfolio1.png" alt="Talabat food-delivery dashboard in Tableau" loading="lazy"></div>
+      <div class="body">
+        <p class="meta">SQL and Tableau</p>
+        <h3>Talabat: from business questions to an executive dashboard</h3>
+        <p>A SQL-driven case study analysing food-delivery order and customer data to uncover growth opportunities, from raw exploration to an executive-ready Tableau dashboard.</p>
+        <div class="links">
+          <a href="https://public.tableau.com/app/profile/abdelrahman.amawi/viz/Talabat_Study_Case_Dummy_Data_Abdelrahman/Q1Q2Q11" target="_blank" rel="noopener noreferrer"><i class="uil uil-chart-bar"></i>Dashboard</a>
+          <a href="https://docs.google.com/presentation/d/e/2PACX-1vS1y6pnlVBEV_nMxvz5khBdOFk8LsIFZsYh3Wd5_Rfao2FdhV49Pmiu8sI7bi2xh-YMj6z2gFjkakgO/pub?start=true&loop=true&delayms=3000" target="_blank" rel="noopener noreferrer"><i class="uil uil-presentation"></i>Executive brief</a>
+          <a href="https://medium.com/@abdelrahman.amawii/from-business-questions-to-executive-dashboards-solving-a-food-delivery-analytics-case-with-sql-b346ccad16e1" target="_blank" rel="noopener noreferrer"><i class="uil uil-book-open"></i>Case study</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</div></section>
 
-<div><a href="#" class="scrollup" id="scroll-up">
-            <i class="uil uil-arrow-up scrollup__icon"></i>
-        </a></div>
+<section class="g sec" id="stack" aria-labelledby="stack-h"><div class="inner">
+  <h2 class="big" id="stack-h" data-aos="fade-up">Technical stack</h2>
+  <p class="take" data-aos="fade-up">The languages, platforms and methods behind the dashboards and models.</p>
+  <div class="stack">
+    <div class="col glass" data-aos="fade-up"><h3>Programming and query</h3><ul>
+      <li><img src="assets/img/sql.png" alt="">SQL</li><li><img src="assets/img/postgres.png" alt="">PostgreSQL</li><li><img src="assets/img/python.png" alt="">Python</li><li><img src="assets/img/pandas.png" alt="">pandas</li><li><img src="assets/img/numpy.png" alt="">NumPy</li><li><img src="assets/img/scikit.png" alt="">scikit-learn</li><li><img src="assets/img/dax.png" alt="">DAX</li><li><img src="assets/img/html.png" alt="">HTML</li></ul></div>
+    <div class="col glass" data-aos="fade-up"><h3>Analytics and BI</h3><ul>
+      <li><img src="assets/img/powerbi.png" alt="">Power BI</li><li><img src="assets/img/fabric.png" alt="">Microsoft Fabric</li><li><img src="assets/img/tableau.png" alt="">Tableau</li><li><img src="assets/img/quicksight.png" alt="">QuickSight</li><li><img src="assets/img/excel.png" alt="">Microsoft Excel</li></ul></div>
+    <div class="col glass" data-aos="fade-up"><h3>Data and cloud</h3><ul>
+      <li><img src="assets/img/bigquery.png" alt="">Google BigQuery</li><li><img src="assets/img/googleanalytics.png" alt="">Google Analytics</li><li><img src="assets/img/sheets.png" alt="">Google Sheets</li><li><img src="assets/img/sharepoint.png" alt="">SharePoint</li><li><img src="assets/img/streamlit.png" alt="">Streamlit</li><li><img src="assets/img/vscode.png" alt="">VS Code</li></ul></div>
+    <div class="col glass" data-aos="fade-up"><h3>Methods</h3><div class="tags">
+      <span>EDA</span><span>Root cause analysis</span><span>KPI tracking</span><span>Dashboard design</span><span>Data cleaning</span><span>Trend analysis</span><span>Automation workflows</span><span>Statistical modelling</span><span>Survival analysis</span><span>NLP and text classification</span><span>REST APIs (OAuth2, JWT)</span></div></div>
+  </div>
+</div></section>
 
-<script src="assets/js/swiper-bundle.min.js"></script>
+<section class="g sec" id="certificates" aria-labelledby="cert-h"><div class="inner">
+  <h2 class="big" id="cert-h" data-aos="fade-up">Certificates</h2>
+  <p class="take" data-aos="fade-up">A selection. The <a href="https://www.linkedin.com/in/abdelrahman-amawi/details/certifications/" target="_blank" rel="noopener noreferrer">full list is on LinkedIn</a>.</p>
+  <div class="certs">
+    <div class="cert glass" data-aos="fade-up"><div class="img well"><img src="assets/img/AWS Cloud Quest Generative AI Practitioner.png" alt="AWS Cloud Quest Generative AI Practitioner badge" loading="lazy"></div><h3>AWS Cloud Quest: Generative AI Practitioner</h3><a href="assets/pdf/AWS Cloud Quest Generative AI Practitioner.pdf" target="_blank" rel="noopener">View certificate <i class="uil uil-arrow-right"></i></a></div>
+    <div class="cert glass" data-aos="fade-up"><div class="img well"><img src="assets/img/AWS Cloud Quest Cloud Practioner.png" alt="AWS Cloud Quest Cloud Practitioner badge" loading="lazy"></div><h3>AWS Cloud Quest: Cloud Practitioner</h3><a href="assets/pdf/AWS Cloud Quest Cloud Practioner.pdf" target="_blank" rel="noopener">View certificate <i class="uil uil-arrow-right"></i></a></div>
+    <div class="cert glass" data-aos="fade-up"><div class="img well"><img src="assets/img/CS ACES Certification Stage 2.jpeg" alt="CS ACES Certification Stage 2" loading="lazy"></div><h3>CS ACES Certification, Stage 2</h3><a href="assets/pdf/CS ACES Certification Stage 2.pdf" target="_blank" rel="noopener">View certificate <i class="uil uil-arrow-right"></i></a></div>
+    <div class="cert glass" data-aos="fade-up"><div class="img well"><img src="assets/img/EFSET.png" alt="EF SET English certificate, C2 Proficient" loading="lazy"></div><h3>EF SET English, C2 Proficient</h3><a href="assets/pdf/EF SET Certificate.pdf" target="_blank" rel="noopener">View certificate <i class="uil uil-arrow-right"></i></a></div>
+  </div>
+</div></section>
 
-<script src="assets/js/main.js"></script>
+<section class="g sec" id="recommendations" aria-labelledby="rec-h"><div class="inner">
+  <h2 class="big" id="rec-h" data-aos="fade-up">What colleagues say</h2>
+  <p class="take" data-aos="fade-up">From managers and peers at Amazon. <a href="https://www.linkedin.com/in/abdelrahman-amawi/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="noopener noreferrer">All recommendations on LinkedIn</a>.</p>
+  <div class="quotes">
+    <figure class="quote glass" data-aos="fade-up">
+      <blockquote>"He took the initiative to self-learn various AI tools and techniques and successfully applied them to streamline several processes within the team."</blockquote>
+      <details><summary>Read the full recommendation</summary>
+        <p>I have had the privilege of working with Abdelrahman since 2021, and it has been a pleasure to watch his professional growth over the years. From the start, Abdelrahman has stood out for his strong sense of ownership, curiosity, and a genuine eagerness to learn.</p>
+        <p>One of the things I admire most about him is his ability to identify opportunities to improve how we work. He took the initiative to self-learn various AI tools and techniques and successfully applied them to streamline several processes within the team. This not only enhanced efficiency but also inspired others to think more creatively about leveraging technology in our day-to-day work.</p>
+        <p>Abdelrahman consistently delivers high-quality output, communicates clearly, and approaches every challenge with a solution-oriented mindset. He brings a great mix of analytical thinking and enthusiasm that makes him a valuable member of any team.</p></details>
+      <figcaption class="who"><img src="assets/img/testimonial1.jpg" alt=""><div><b>Prateek Saxena <a href="https://www.linkedin.com/in/prateeksaxena87/" target="_blank" rel="noopener noreferrer" aria-label="Prateek Saxena on LinkedIn"><i class="uil uil-linkedin"></i></a></b><span>Head of MENA CX, Amazon</span></div></figcaption>
+    </figure>
+    <figure class="quote glass" data-aos="fade-up">
+      <blockquote>"Amawi combines technical curiosity with strong execution, ensuring that ideas don't just stay theoretical, they turn into real outcomes."</blockquote>
+      <details><summary>Read the full recommendation</summary>
+        <p>I had the pleasure of directly managing Amawi, and he quickly stood out as an early adopter of AI-driven solutions within the team. His forward-thinking mindset and ability to leverage emerging technologies translated into tangible results and measurable impact for our projects.</p>
+        <p>Amawi combines technical curiosity with strong execution, ensuring that ideas don't just stay theoretical, they turn into real outcomes. Beyond his individual contributions, he is a true team player, always open to collaboration, knowledge-sharing, and helping others navigate new tools and approaches.</p>
+        <p>His adaptability, results orientation, and collaborative nature make him a valuable asset to any team embracing innovation and change. I'd highly recommend Amawi to any organization looking for a professional who can bridge technology and teamwork seamlessly.</p></details>
+      <figcaption class="who"><img src="assets/img/testimonial2.jpg" alt=""><div><b>Rohan Kedia <a href="https://ae.linkedin.com/in/rohan-kedia" target="_blank" rel="noopener noreferrer" aria-label="Rohan Kedia on LinkedIn"><i class="uil uil-linkedin"></i></a></b><span>Sr. Program Manager, Amazon CX</span></div></figcaption>
+    </figure>
+    <figure class="quote glass" data-aos="fade-up">
+      <blockquote>"He self-taught himself advanced AI and tech skills and used them to automate processes we never thought possible, delivering real results."</blockquote>
+      <details><summary>Read the full recommendation</summary>
+        <p>Abdelrahman is one of the smartest and most adaptable people I've worked with. He self-taught himself advanced AI and tech skills and used them to automate processes we never thought possible, delivering real results. His ability to combine technical expertise with practical problem solving skills is truly impressive.</p>
+        <p>Beyond his skills, Abdelrahman brings incredible energy to the workplace. He's genuinely fun to work with and keeps the team motivated. He's an incredible team player, always ready to help others succeed. I highly recommend Abdelrahman to any organization, and they would be lucky to work with him.</p></details>
+      <figcaption class="who"><img src="assets/img/testimonial3.jpg" alt=""><div><b>Sreenidhi Vijayan <a href="https://in.linkedin.com/in/sreenidhivijayan" target="_blank" rel="noopener noreferrer" aria-label="Sreenidhi Vijayan on LinkedIn"><i class="uil uil-linkedin"></i></a></b><span>Business Analyst, Amazon CX</span></div></figcaption>
+    </figure>
+    <figure class="quote glass" data-aos="fade-up">
+      <blockquote>"Amawi consistently went above and beyond his core responsibilities, supporting my team in automating several of our key processes."</blockquote>
+      <details><summary>Read the full recommendation</summary>
+        <p>I had the pleasure of working with Abdelrahman Amawi, and I was truly impressed by his dedication and proactive mindset. Amawi consistently went above and beyond his core responsibilities, supporting my team in automating several of our key processes, a contribution that had a direct impact on efficiency and overall customer experience.</p>
+        <p>What stood out most is his strong sense of ownership and his genuine drive for organizational excellence. He demonstrates great skill in diving deep, learning new areas quickly, and turning challenges into opportunities for improvement.</p>
+        <p>Amawi is a true example of someone who embodies continuous learning and collaboration, and I highly recommend him to any team looking for a reliable, innovative, and customer-obsessed professional.</p></details>
+      <figcaption class="who"><img src="assets/img/testimonial4.jpg" alt=""><div><b>Norhan Salah <a href="https://eg.linkedin.com/in/norhan-salah-4670a71b1" target="_blank" rel="noopener noreferrer" aria-label="Norhan Salah on LinkedIn"><i class="uil uil-linkedin"></i></a></b><span>Retail Vendor Manager, Amazon Business</span></div></figcaption>
+    </figure>
+  </div>
+</div></section>
 
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script>
-        var typed = new Typed(".auto-input", {
-            strings: [
-                "a Data Analyst",
-                "a Predictive Modeler",
-                "an Automation Expert",
-                "a CX Program Lead",
-            ],
-            typeSpeed: 50,
-            backSpeed: 50,
-            loop: true,
-        });
-    </script>
+<section class="g sec" id="contact" aria-labelledby="contact-h"><div class="inner">
+  <h2 class="big" id="contact-h" data-aos="fade-up">Let's talk</h2>
+  <p class="take" data-aos="fade-up">Open to data, analytics and CX programme roles. The quickest way to reach me is email or LinkedIn.</p>
+  <div class="contact">
+    <div class="reach" data-aos="fade-up">
+      <a class="glass" href="mailto:abdelrahman.amawii@gmail.com"><i class="uil uil-envelope"></i><div><b>Email</b><span>abdelrahman.amawii@gmail.com</span></div></a>
+      <a class="glass" href="https://www.linkedin.com/in/abdelrahman-amawi/" target="_blank" rel="noopener noreferrer"><i class="uil uil-linkedin"></i><div><b>LinkedIn</b><span>linkedin.com/in/abdelrahman-amawi</span></div></a>
+      <a class="glass" href="https://github.com/abdelrahmanamawii" target="_blank" rel="noopener noreferrer"><i class="uil uil-github-alt"></i><div><b>GitHub</b><span>github.com/abdelrahmanamawii</span></div></a>
+    </div>
+    <form class="glass" action="https://formsubmit.co/abdelrahman.amawii@gmail.com" method="POST" data-aos="fade-up">
+      <div class="row2">
+        <label for="f-name">Your name<input id="f-name" name="name" type="text" autocomplete="name" required></label>
+        <label for="f-email">Your email<input id="f-email" name="email" type="email" autocomplete="email" required></label>
+      </div>
+      <label for="f-subject">Subject<input id="f-subject" name="_subject" type="text"></label>
+      <label for="f-message">Message<textarea id="f-message" name="message" rows="6" required></textarea></label>
+      <div><button class="btn solid" type="submit">Send message <i class="uil uil-message"></i></button></div>
+    </form>
+  </div>
+</div></section>
+</main>
 
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            offset: 300,
-            duration: 2000
-        });
-    </script>
+<footer class="foot g"><div class="inner">
+  <div class="foot-grid">
+    <div><div class="name">Abdelrahman Amawi</div><p class="role-line">Data analytics and automation</p></div>
+    <div class="icons">
+      <a href="https://www.linkedin.com/in/abdelrahman-amawi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="uil uil-linkedin"></i></a>
+      <a href="https://github.com/abdelrahmanamawii" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="uil uil-github-alt"></i></a>
+      <a href="https://wa.me/962795196712" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="uil uil-whatsapp"></i></a>
+    </div>
+  </div>
+  <p class="copy">&copy; 2026 Abdelrahman Amawi</p>
+</div></footer>
 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+(function(){
+  var root = document.documentElement, btn = document.getElementById("theme");
+  function icon(){ btn.innerHTML = '<i class="uil ' + (root.getAttribute("data-theme") === "dark" ? "uil-sun" : "uil-moon") + '"></i>'; }
+  icon();
+  btn.addEventListener("click", function(){
+    var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("selected-theme", next); } catch(e) {}
+    icon();
+  });
+  var head = document.getElementById("head");
+  window.addEventListener("scroll", function(){ head.classList.toggle("scrolled", window.scrollY > 8); }, {passive:true});
+  var links = Array.prototype.slice.call(document.querySelectorAll("#nav a")), nav = document.getElementById("nav");
+  if ("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (!e.isIntersecting) return;
+      links.forEach(function(a){ var on = a.getAttribute("href") === "#" + e.target.id; a.setAttribute("aria-current", on ? "true" : "false"); if (on) nav.scrollLeft = a.offsetLeft - nav.clientWidth / 2 + a.clientWidth / 2; }); }); }, {rootMargin:"-40% 0px -55% 0px"});
+    links.forEach(function(a){ var s = document.querySelector(a.getAttribute("href")); if (s) io.observe(s); });
+  }
+  /* Scroll animations kept from the original site: each block stays hidden until it reaches the screen */
+  AOS.init({offset:120, duration:900, easing:"ease-out-cubic", once:true});
+})();
+</script>
 </body>
-
 </html>
