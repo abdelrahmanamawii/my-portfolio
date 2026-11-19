@@ -293,11 +293,6 @@ h2.big{font-size:clamp(36px,4.6vw,64px);line-height:.98;font-weight:820;letter-s
 .cols3 li{font:400 16px/1.5 var(--read);color:var(--on-field-2)}
 .cols3 li b{color:var(--on-field);font-weight:600}
 @media (max-width:900px){.cols3{grid-template-columns:1fr}}
-.next{margin-top:56px;padding-top:0}
-.next h3{font-size:22px;font-weight:780}
-.next ol{margin:12px 0 0;padding-left:20px;display:grid;gap:8px;max-width:72ch}
-.next li{font:400 16.5px/1.5 var(--read);color:var(--on-field-2)}
-.next li b{color:var(--on-field);font-weight:600}
 
 /* ---------- footer ---------- */
 .foot{padding-block:48px 40px}
@@ -456,15 +451,6 @@ html.pg-leaving main{transform:translateY(-8px);transition-duration:.28s;transit
         <li>Paths made OS-neutral; a Windows-only email automation replaced with Power Automate.</li>
       </ul>
     </div>
-  </div>
-  <div class="next">
-    <h3>What I'd do next</h3>
-    <ol>
-      <li><b>Refresh the database statistics</b> with an admin: the proper root fix for the slow query, which I could only work around.</li>
-      <li><b>Move credentials into a secrets store</b> instead of the scripts.</li>
-      <li><b>Run on a schedule</b>, unattended, with alerts when a step fails.</li>
-      <li><b>Show the full error</b> in the run screen, not just which step failed.</li>
-    </ol>
   </div>
 </div></section>
 </main>
