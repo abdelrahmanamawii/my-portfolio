@@ -307,7 +307,17 @@ h2.big{font-size:clamp(36px,4.6vw,64px);line-height:.98;font-weight:820;letter-s
 .foot .btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--ground);text-decoration:none;border-radius:12px;padding:12px 18px;font-weight:700}
 .foot .btn svg{width:14px;height:14px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+/* ---------- smooth page-to-page transition (portfolio <-> pipeline) ----------
+   The page only starts hidden if the script below can reveal it, so it can never get stuck invisible. */
+body{transition:opacity .6s cubic-bezier(.2,.7,.2,1)}
+main{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+html.pg-pre body{opacity:0}
+html.pg-pre main{transform:translateY(14px)}
+html.pg-leaving body{opacity:0;transition-duration:.28s;transition-timing-function:ease}
+html.pg-leaving main{transform:translateY(-8px);transition-duration:.28s;transition-timing-function:ease}
+@media (prefers-reduced-motion:reduce){body,main{transition:none}}
 </style>
+<script>try{if(!(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches))document.documentElement.classList.add("pg-pre")}catch(e){}</script>
 <script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("selected-theme")==="dark"?"dark":"light")}catch(e){document.documentElement.setAttribute("data-theme","light")}</script>
 </head>
 <body>
@@ -898,6 +908,26 @@ document.addEventListener("keydown", function(e){
 
 drawAll();
 var rt; window.addEventListener("resize", function(){ clearTimeout(rt); rt = setTimeout(function(){ layoutCurve(); drawAll(); if (openN) $$("#p-body .chart").forEach(function(c){ CH[c.dataset.chart](c); }); }, 150); });
+})();
+</script>
+<script>
+/* Fade the page out before moving between the portfolio and the pipeline page */
+(function(){
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.addEventListener("click", function(e){
+    if (reduce || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target.closest && e.target.closest("a[href]"); if (!a || a.target === "_blank" || a.hasAttribute("download")) return;
+    var u; try { u = new URL(a.href, location.href); } catch(err){ return; }
+    if (u.origin !== location.origin || u.pathname === location.pathname || /\.(pdf|png|jpe?g|docx?|xlsx?)$/i.test(u.pathname)) return;
+    e.preventDefault();
+    document.documentElement.classList.add("pg-leaving");
+    setTimeout(function(){ location.href = u.href; }, 280);
+  });
+  /* reveal: fade in on arrival (and undo the fade-out when Back restores the page from cache) */
+  function show(){ document.documentElement.classList.remove("pg-pre", "pg-leaving"); }
+  requestAnimationFrame(function(){ requestAnimationFrame(show); });
+  setTimeout(show, 400);
+  window.addEventListener("pageshow", show);
 })();
 </script>
 </body>

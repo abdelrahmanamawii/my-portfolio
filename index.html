@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400..900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@500&display=swap">
 <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<script>try{if(!(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches))document.documentElement.classList.add("pg-pre")}catch(e){}</script>
 <script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("selected-theme")==="dark"?"dark":"light")}catch(e){document.documentElement.setAttribute("data-theme","light")}</script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ52PYWQXY"></script>
@@ -281,6 +282,15 @@ textarea{resize:vertical;min-height:150px}
 .foot .icons a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--field-2);color:var(--on-field);font-size:20px;text-decoration:none}
 .foot .copy{margin-top:28px;font-size:14px;color:var(--on-field-2)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+/* ---------- smooth page-to-page transition (portfolio <-> pipeline) ----------
+   The page only starts hidden if the script below can reveal it, so it can never get stuck invisible. */
+body{transition:opacity .6s cubic-bezier(.2,.7,.2,1)}
+main{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+html.pg-pre body{opacity:0}
+html.pg-pre main{transform:translateY(14px)}
+html.pg-leaving body{opacity:0;transition-duration:.28s;transition-timing-function:ease}
+html.pg-leaving main{transform:translateY(-8px);transition-duration:.28s;transition-timing-function:ease}
+@media (prefers-reduced-motion:reduce){body,main{transition:none}}
 </style>
 </head>
 <body>
@@ -576,6 +586,26 @@ textarea{resize:vertical;min-height:150px}
   }
   /* Scroll animations kept from the original site: each block stays hidden until it reaches the screen */
   AOS.init({offset:120, duration:900, easing:"ease-out-cubic", once:true});
+})();
+</script>
+<script>
+/* Fade the page out before moving between the portfolio and the pipeline page */
+(function(){
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.addEventListener("click", function(e){
+    if (reduce || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target.closest && e.target.closest("a[href]"); if (!a || a.target === "_blank" || a.hasAttribute("download")) return;
+    var u; try { u = new URL(a.href, location.href); } catch(err){ return; }
+    if (u.origin !== location.origin || u.pathname === location.pathname || /\.(pdf|png|jpe?g|docx?|xlsx?)$/i.test(u.pathname)) return;
+    e.preventDefault();
+    document.documentElement.classList.add("pg-leaving");
+    setTimeout(function(){ location.href = u.href; }, 280);
+  });
+  /* reveal: fade in on arrival (and undo the fade-out when Back restores the page from cache) */
+  function show(){ document.documentElement.classList.remove("pg-pre", "pg-leaving"); }
+  requestAnimationFrame(function(){ requestAnimationFrame(show); });
+  setTimeout(show, 400);
+  window.addEventListener("pageshow", show);
 })();
 </script>
 </body>
